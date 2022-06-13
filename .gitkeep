@@ -1,5 +1,5 @@
-components/
-hooks/
-pages/
-routes/
-services/
+/components
+/hooks
+/pages
+/routes
+/services
