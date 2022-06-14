@@ -1,0 +1,96 @@
+.titleNews {
+    padding: 1rem;
+}
+.newsContent {
+    display: block;
+    width: 100%;
+}
+.article {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+.article__image{
+    display: block;
+    height: fit-content;
+}
+.article__image > img{
+    background-color: var(--gray-color);
+    display: block;
+    height: 100%;
+    max-height: 20rem;
+    max-width: 100%;
+    min-height: 12rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.article__description {
+    border-bottom: .1rem solid var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1rem;
+}
+.article__description > a {  
+    color: var(--text-color); 
+    text-decoration: none;
+}
+.article__description > a:hover {
+    text-decoration: underline;
+}
+.article__description > a > h3.title {
+    font-family: 'Newsreader', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+.article__description > p {
+    font-family: 'Newsreader', serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.article__description > small {
+    color: var(--text-color-gray);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+.article__description > small > span {
+    word-break: break-all;
+}
+.article__description > small > span:first-child {
+    padding-right: 1rem;
+}
+
+@media (min-width: 600px) {
+    .titleNews {
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .article {
+        border-bottom: .1rem solid var(--gray-color);
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 2fr 1fr;
+        padding: 1rem;
+    }
+    .article__description {
+        border-bottom: none;
+        margin: 0;
+        padding: 0;
+    }
+    .article__description > small {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .newsContent {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .article {
+        grid-template-columns: 1fr 1fr;
+    }
+}
