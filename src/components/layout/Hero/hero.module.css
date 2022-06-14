@@ -1,0 +1,10 @@
+.hero {
+  height: 60vh;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background: rgb(38, 37, 37);
+  color: white;
+}

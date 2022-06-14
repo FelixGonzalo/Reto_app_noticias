@@ -62,12 +62,13 @@
   padding-right: 1rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .article {
     border-bottom: 0.1rem solid var(--gray-color);
     display: grid;
     gap: 1rem;
     grid-template-columns: 2fr 1fr;
+    padding: 1rem;
   }
   .article__description {
     border-bottom: none;
@@ -85,7 +86,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+}
+
+@media (min-width: 1200px) {
   .article {
     grid-template-columns: 1fr 1fr;
+    padding: 0;
   }
 }

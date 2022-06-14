@@ -1,30 +1,30 @@
 export const newsCategories = {
   business: {
     category: 'business',
-    categoria: 'Negocios',
+    categoria: 'negocios',
   },
   entertainment: {
     category: 'entertainment',
-    categoria: 'Entretenimiento',
+    categoria: 'entretenimiento',
   },
   general: {
     category: 'general',
-    categoria: 'General',
+    categoria: 'general',
   },
   health: {
     category: 'health',
-    categoria: 'Salud',
+    categoria: 'salud',
   },
   science: {
     category: 'science',
-    categoria: 'Ciencias',
+    categoria: 'ciencias',
   },
   sports: {
     category: 'sports',
-    categoria: 'Deportes',
+    categoria: 'deportes',
   },
   technology: {
     category: 'technology',
-    categoria: 'Tecnología',
+    categoria: 'tecnología',
   },
 }

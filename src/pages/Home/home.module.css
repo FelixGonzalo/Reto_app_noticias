@@ -1,4 +1,40 @@
+.home::after {
+  content: '';
+  width: 100%;
+  height: 40vh;
+  max-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgb(226, 58, 58) 75%, rgb(171, 53, 53));
+}
+
 .subTitle {
-  margin: 1.5rem 0;
+  margin: 2rem 1rem;
   text-transform: uppercase;
+}
+
+.home__seemore {
+  text-decoration: none;
+  color: red;
+  display: block;
+  text-align: center;
+  margin-top: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .subTitle {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subTitle {
+    margin: 2rem 0;
+  }
+  .home__seemore {
+    text-align: right;
+    margin-top: 10px;
+  }
 }

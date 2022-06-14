@@ -10,7 +10,6 @@ export function useNewsByCategory({ category, pageSize }) {
     getNewsByCategory({ category, pageSize })
       .then((news) => {
         setData(news)
-        console.log(news)
         setLoading(false)
       })
       .catch((error) => {
