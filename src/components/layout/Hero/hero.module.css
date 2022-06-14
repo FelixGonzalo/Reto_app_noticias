@@ -1,10 +1,64 @@
 .hero {
+  background-color: var(--background-color);
   height: 60vh;
   max-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  background: rgb(38, 37, 37);
   color: white;
+  position: relative;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+}
+
+.hero__image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: opacity(.9);
+}
+
+.hero__imageDescription {
+  background-color: rgba(30, 30, 30, 0.456);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  filter: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem;
+}
+.hero__imageDescription > a{
+  color: white;
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.hero__imageDescription > a:hover {
+  text-decoration: underline;
+}
+.hero__imageDescription > p {
+  display: none;
+  font-family: 'Newsreader', serif;
+  font-size: 1.2rem;
+}
+.hero__imageDescription > small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .hero__imageDescription > a{
+    font-size: 1.6rem;
+  }
+  .hero__imageDescription > p {
+    display: inline;
+    font-family: 'Newsreader', serif;
+    font-size: 1.2rem;
+  }
 }
