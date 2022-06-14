@@ -2,7 +2,7 @@
 
 :root {
   --text-color: #242424;
-  --text-color-gray:#828282;
+  --text-color-gray: #828282;
   --background-color: #f1f1f1;
   --gray-color: #dbdbdb;
 }
@@ -23,7 +23,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 /* 
@@ -34,7 +33,6 @@ body {
   DESKTOP > 1024PX
 */
 
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -44,5 +42,11 @@ img {
   max-width: 100%;
 }
 
-
-
+.wrapper {
+  width: 100%;
+  max-width: 1220px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
