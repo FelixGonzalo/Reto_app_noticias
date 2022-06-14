@@ -18,7 +18,7 @@ const NewsList = ({ data, isLoading, isError }) => {
 
   return (
     <div className={styles.newsContent}>
-      {data.map((item, index) => {
+      {data?.map((item, index) => {
         return (
           <Suspense key={index} fallback={<LoadArticles />}>
             <Article

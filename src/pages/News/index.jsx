@@ -1,30 +1,57 @@
 import React, { useState } from 'react'
-import { useFetch } from '../../hooks/useFetch'
-import NewsList from '../../components/NewList/NewsList'
+import { useNewsBySearch } from './../../hooks/useNewsBySearch';
+import NewsList from '../../components/NewsList/NewsList'
 import styles from './news.module.css'
+import { SimpleHeader } from '../../components/layout/Header';
 
 const News = () => {
-  const [page, setPage] = useState(1)
 
-  const search = 'actualidad'
-  const apiKey = 'cf79decbd27746eeb6e06fe3341b2459'
-  const url = `https://newsapi.org/v2/everything?qInTitle=${search}&page=${page}&language=es&apiKey=${apiKey}`
+  const [page] = useState(1)
+  const [searchInput,setSearchInput] = useState('');
+  const [searchSubmit,setSearchSubmit] = useState('actualidad');
+  
+  const { data, isloading, isError } = useNewsBySearch({
+    search : searchSubmit, 
+    page: page
+  });
 
-  const { data, isloading, isError } = useFetch(url)
-
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if(searchInput.length === 0) {
+      setSearchSubmit('actualidad');
+    }else {
+      setSearchSubmit(searchInput);
+      setSearchInput('');
+    }
+  }
   return (
     <>
+      <SimpleHeader/>
       <main className="wrapper">
+
         <div className={styles.titleNews}>
-          <h2>Noticias</h2>
-          <p>Búsquedas por "{search}"</p>
+          <h2>NOTICIAS</h2>
           <p>Página {page}</p>
         </div>
-        <NewsList
-          data={data?.articles}
-          isloading={isloading}
-          isError={isError}
-        />
+
+        <form className={styles.search} onSubmit={(e) => handleSearch(e)}>
+          <input 
+            type="text"
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            placeholder='Búsqueda de Artículos ...'
+          />
+          <p>
+            {
+              searchSubmit==='actualidad'
+              ? ""
+              :
+              `Resultados "${searchSubmit}"`
+            }
+          </p>
+        </form>
+
+        <NewsList data={data} isloading={isloading} isError={isError}/>
       </main>
     </>
   )

@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Footer } from '../../components/layout/Footer.jsx'
 import { Header } from '../../components/layout/Header'
 import { Hero } from '../../components/layout/Hero'
-import NewsList from '../../components/NewList/NewsList'
+import NewsList from '../../components/NewsList/NewsList'
 import { useNewsByCategory } from '../../hooks/useNewsByCategory'
 import { newsCategories } from '../../services/newsApi/getNewsCategories'
 import styles from './home.module.css'
@@ -67,7 +66,6 @@ const Home = () => {
           </Link>
         </section>
       </main>
-      <Footer />
     </main>
   )
 }

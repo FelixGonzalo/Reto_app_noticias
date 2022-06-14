@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Footer } from '../components/layout/Footer.jsx'
 import Home from '../pages/Home'
 import { NewsByCategory } from '../pages/NewsByCategory'
 import News from './../pages/News'
@@ -13,6 +14,7 @@ export default function AppRoutes() {
         <Route path="/noticias/:category" element={<NewsByCategory />} />
         <Route path="/login" element={<h1>Login</h1>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }

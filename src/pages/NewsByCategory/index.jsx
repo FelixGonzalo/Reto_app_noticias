@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom'
-import { Footer } from '../../components/layout/Footer.jsx'
 import { SimpleHeader } from '../../components/layout/Header'
-import NewsList from '../../components/NewList/NewsList'
+import NewsList from '../../components/NewsList/NewsList'
 import { useNewsByCategory } from '../../hooks/useNewsByCategory'
 import { newsCategories } from '../../services/newsApi/getNewsCategories'
 
@@ -14,7 +13,6 @@ export function NewsByCategory() {
   return (
     <>
       <SimpleHeader />
-
       <main className="wrapper">
         <h1 style={{ marginLeft: '5px' }}>
           | Noticias sobre {newsCategories[category].categoria}
@@ -23,7 +21,6 @@ export function NewsByCategory() {
         <br />
         <NewsList data={businessData} isloading={businessLoading} />
       </main>
-      <Footer />
     </>
   )
 }

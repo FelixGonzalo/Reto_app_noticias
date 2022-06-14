@@ -21,7 +21,7 @@
     gap: .5rem;
     margin: 1rem;
 }
-.article__description > div > h3 {
+.article__description > div > span {
     animation: loading 1s linear infinite alternate;
     background-color: var(--gray-color);
     display: block;
@@ -29,7 +29,7 @@
     margin-bottom: .3rem;
     width: 90%;
 }
-.article__description > div > h3:first-child {
+.article__description > div > span:first-child {
     background-color: var(--gray-color);
     display: block;
     width: 99%;
@@ -51,11 +51,11 @@
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .article {
         border-bottom: .1rem solid var(--gray-color);
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
         grid-template-columns: 2fr 1fr;
         padding: 1rem;
     }
@@ -69,7 +69,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     .article {
         grid-template-columns: 1fr 1fr;
     }

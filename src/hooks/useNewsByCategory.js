@@ -16,6 +16,7 @@ export function useNewsByCategory({ category, pageSize }) {
         setLoading(false)
         console.error(error)
       })
+  // eslint-disable-next-line
   }, [])
 
   return { loading, data }

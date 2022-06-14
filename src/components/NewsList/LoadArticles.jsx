@@ -6,8 +6,8 @@ const LoadArticles = () => {
         <article className={styles.article}>
             <div className={styles.article__description}>
                 <div>
-                    <h3></h3>
-                    <h3></h3>
+                    <span></span>
+                    <span></span>
 
                 </div>
                 <div>

@@ -44,5 +44,5 @@
 
 .simpleHeader,
 .simpleHeader .header__btn {
-  color: rgb(226, 58, 58);
+  color: var(--primary-color);
 }
