@@ -30,7 +30,7 @@ const News = () => {
       <main className="wrapper">
 
         <div className={styles.titleNews}>
-          <h2>NOTICIAS</h2>
+          <h2>MAS NOTICIAS</h2>
           <p>Página {page}</p>
         </div>
 
