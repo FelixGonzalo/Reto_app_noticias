@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import { Login } from '../pages/Login/index.jsx'
 import { NewsByCategory } from '../pages/NewsByCategory'
 import { Register } from '../pages/Register/index.jsx'
+import { UserProfile } from '../pages/UserProfile/index.jsx'
 import News from './../pages/News'
 
 export default function AppRoutes() {
@@ -24,6 +25,12 @@ export default function AppRoutes() {
         <Route
           path="/register"
           element={isUserLoggedIn ? <Navigate to="/" replace /> : <Register />}
+        />
+        <Route
+          path="/usuario/perfil"
+          element={
+            isUserLoggedIn ? <UserProfile /> : <Navigate to="/" replace />
+          }
         />
       </Routes>
       <Footer />

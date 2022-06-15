@@ -9,7 +9,7 @@ const initialValue = {
 
 const CurrentUserProvider = (props) => {
   const [currentUser, setCurrentUser] = useState(initialValue)
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(true)
 
   useEffect(() => {
     checkCurrentUser()
@@ -24,6 +24,8 @@ const CurrentUserProvider = (props) => {
         userProfile: JSON.parse(userProfile),
       })
       setIsUserLoggedIn(true)
+    } else {
+      setIsUserLoggedIn(false)
     }
   }
 
