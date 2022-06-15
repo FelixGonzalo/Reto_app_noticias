@@ -4,6 +4,7 @@ import { useCurrentUser } from '../hooks/auth/useCurrentUser.js'
 import Home from '../pages/Home'
 import { Login } from '../pages/Login/index.jsx'
 import { NewsByCategory } from '../pages/NewsByCategory'
+import { Register } from '../pages/Register/index.jsx'
 import News from './../pages/News'
 
 export default function AppRoutes() {
@@ -19,6 +20,10 @@ export default function AppRoutes() {
         <Route
           path="/login"
           element={isUserLoggedIn ? <Navigate to="/" replace /> : <Login />}
+        />
+        <Route
+          path="/register"
+          element={isUserLoggedIn ? <Navigate to="/" replace /> : <Register />}
         />
       </Routes>
       <Footer />

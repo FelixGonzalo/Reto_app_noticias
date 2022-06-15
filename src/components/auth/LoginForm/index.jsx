@@ -1,15 +1,21 @@
 import { useForm } from 'react-hook-form'
-import { useCurrentUser } from '../../hooks/auth/useCurrentUser'
-import { useLogin } from '../../hooks/auth/useLogin'
-import { useUserProfile } from '../../hooks/auth/useUserProfile'
+import { useCurrentUser } from '../../../hooks/auth/useCurrentUser'
+import { useLogin } from '../../../hooks/auth/useLogin'
+import { useUserProfile } from '../../../hooks/auth/useUserProfile'
 import styles from './login.module.css'
 
 export function LoginForm() {
-  const { handleLogin, loading: loginLoading, error: loginError } = useLogin()
+  const {
+    handleLogin,
+    loading: loginLoading,
+    error: loginError,
+    errorInfo: loginErrorInfo,
+  } = useLogin()
   const {
     handleUserProfile,
     loading: userProfileLoading,
     error: userProfileError,
+    errorInfo: userProfileErrorInfo,
   } = useUserProfile()
   const { checkCurrentUser } = useCurrentUser()
 
@@ -48,12 +54,16 @@ export function LoginForm() {
       </button>
       <div className={styles.loginForm__status}>
         {(errors.email || errors.password) && (
-          <span>El correo y contraseña son requeridos</span>
+          <span>El correo y contraseña son requeridos. </span>
         )}
-        {loginLoading && <span>Iniciando sesión...</span>}
-        {loginError && <span>Error al iniciar sesión</span>}
-        {userProfileLoading && <span>Cargando perfil del usuario...</span>}
-        {userProfileError && <span>Error al cargar el perfil del usuario</span>}
+        {loginLoading && <span>Iniciando sesión... </span>}
+        {loginError && <span>Error al iniciar sesión </span>}
+        {userProfileLoading && <span>Cargando perfil del usuario... </span>}
+        {userProfileError && (
+          <span>Error al cargar el perfil del usuario </span>
+        )}
+        {loginErrorInfo && <span>{loginErrorInfo?.message}. </span>}
+        {userProfileErrorInfo && <span>{userProfileErrorInfo?.message}. </span>}
       </div>
     </form>
   )

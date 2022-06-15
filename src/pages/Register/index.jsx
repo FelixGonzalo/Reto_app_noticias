@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import { LoginForm } from '../../components/auth/LoginForm'
-import styles from './login.module.css'
+import { RegisterForm } from '../../components/auth/RegisterForm'
+import styles from '../Login/login.module.css'
 
-export function Login() {
+export function Register() {
   return (
     <main className={styles.login}>
       <div className={styles.login__container}>
@@ -11,10 +11,10 @@ export function Login() {
             <Link to={'/'}>_ La Portada _</Link>
             Iniciar Sesión
           </h1>
-          <Link to={'/register'} className={styles.login__link}>
-            No tengo cuenta
+          <Link to={'/login'} className={styles.login__link}>
+            Ya estoy registrado
           </Link>
-          <LoginForm />
+          <RegisterForm />
         </div>
         <div className={styles.login__container__right}>
           <img
