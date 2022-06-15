@@ -1,11 +1,14 @@
 import AppRoutes from './routes/AppRoutes'
 import CurrentUserProvider from './state/context/currentUserProvider'
+import { ThemeProvider } from './state/context/themeProvider'
 
 function App() {
   return (
-    <CurrentUserProvider>
-      <AppRoutes />
-    </CurrentUserProvider>
+    <ThemeProvider>
+      <CurrentUserProvider>
+        <AppRoutes />
+      </CurrentUserProvider>
+    </ThemeProvider>
   )
 }
 

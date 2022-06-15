@@ -2,12 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 :root {
+  --font-logo: 'DM Serif Display', serif;
+}
+:root.light {
   --primary-color: #e23a3a;
   --text-color: #242424;
   --text-color-gray: #828282;
   --background-color: #f1f1f1;
   --gray-color: #dbdbdb;
-  --font-logo: 'DM Serif Display', serif;
+}
+:root.dark {
+  --primary-color: #e23a3a;
+  --text-color: #f1f1f1;
+  --text-color-gray: #646464;
+  --background-color: #242424;
+  --gray-color: #222222;
 }
 
 * {
