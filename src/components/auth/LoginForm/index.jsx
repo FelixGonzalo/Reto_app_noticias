@@ -47,6 +47,8 @@ export function LoginForm() {
       <input
         {...register('password', { required: true })}
         id="password"
+        type="password"
+        autoComplete="on"
         className={styles.loginForm__input}
       />
       <button type="submit" className={styles.loginForm__btn}>
