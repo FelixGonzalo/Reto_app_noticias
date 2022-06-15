@@ -22,6 +22,11 @@
   padding: 5px 10px;
   text-decoration: none;
   color: rgb(236, 195, 195);
+  border: none;
+  font-size: 15px;
+  font-family: var(--font-logo);
+  background: none;
+  cursor: pointer;
 }
 
 .header__title {
