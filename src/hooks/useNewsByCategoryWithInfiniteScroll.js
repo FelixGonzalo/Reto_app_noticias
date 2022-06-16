@@ -9,12 +9,11 @@ export function useNewsByCategoryWithInfiniteScroll({ category, pageSize }) {
   const [isTheEnd, setIsTheEnd] = useState(false)
 
   const handleOnScroll = debounce(() => {
-    if (isTheEnd) return console.log('es el final de la data')
+    if (isTheEnd) return console.log('no more data for infinite scroll')
     if (
       window.innerHeight + window.scrollY >=
       document.body.scrollHeight - 500
     ) {
-      console.log('final de pagina')
       setPage(page + 1)
     } // at the end of the page - 500px
   }, 500)
@@ -26,7 +25,6 @@ export function useNewsByCategoryWithInfiniteScroll({ category, pageSize }) {
   }, [page])
 
   const getNews = () => {
-    console.log('ejecutando getNews')
     setLoading(true)
     getNewsByCategory({ category, pageSize, page })
       .then((news) => {

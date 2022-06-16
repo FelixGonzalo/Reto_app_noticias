@@ -6,6 +6,7 @@ import NewsList from '../../components/NewsList/NewsList'
 import { useNewsByCategory } from '../../hooks/useNewsByCategory'
 import { newsCategories } from '../../services/newsApi/getNewsCategories'
 import styles from './home.module.css'
+import { ReadingAssistanceMenu } from '../../components/ReadingAssistanceMenu'
 
 const Home = () => {
   const { data: businessData, loading: businessLoading } = useNewsByCategory({
@@ -24,8 +25,23 @@ const Home = () => {
     pageSize: 4,
   })
 
+  const readingAssistance_getTextArray = () => {
+    let textArray = []
+    entertainmentData.forEach((item) => {
+      textArray.push(item.title)
+    })
+    sportsData.forEach((item) => {
+      textArray.push(item.title)
+    })
+    businessData.forEach((item) => {
+      textArray.push(item.title)
+    })
+    return textArray
+  }
+
   return (
     <main className={styles.home}>
+      <ReadingAssistanceMenu getTextArray={readingAssistance_getTextArray} />
       <Header />
       <Hero />
       <main className={`wrapper ${styles.home__main}`}>

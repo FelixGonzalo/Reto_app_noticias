@@ -1,0 +1,83 @@
+.switch_button {
+  background-color: var(--text-color);
+  border-radius: 50%;
+  border: none;
+  bottom: 4.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.3rem;
+  height: 3rem;
+  position: fixed;
+  right: 1rem;
+  width: 3rem;
+  animation: 0.5s linear showWithOpacity;
+}
+
+.switch_button:hover {
+  transform: scale(1.1);
+}
+
+.readingAssistanceMenu {
+  width: 100%;
+  max-width: 280px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--text-color);
+  box-shadow: 0 0 10px rgba(97, 97, 97, 0.47);
+  animation: 0.3s linear showWithOpacity;
+}
+
+.readingAssistanceMenu_title {
+  color: var(--background-color);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+.readingAssistanceMenu_btnclose {
+  font-size: 20px;
+  background: none;
+  border: none;
+  float: right;
+  font-weight: bold;
+  color: var(--background-color);
+  cursor: pointer;
+}
+
+.readingAssistanceMenu_options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.readingAssistanceMenu_options button {
+  font-size: 30px;
+  border: none;
+  background: var(--background-color);
+  border-radius: 100%;
+  padding: 4px;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(97, 97, 97, 0.47);
+}
+
+.active {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
+@keyframes showWithOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
