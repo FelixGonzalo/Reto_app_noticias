@@ -8,6 +8,7 @@ export async function getNewsBySearch({ search = {}, page = 1 }) {
     .then((res) => res.json())
     .then((res) => {
       const { articles } = res
+      console.log(res)
       if (!Array.isArray(articles)) return []
       return articles
     })
