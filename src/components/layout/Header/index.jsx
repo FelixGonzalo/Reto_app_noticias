@@ -40,6 +40,10 @@ export function SimpleHeader() {
     <header className={`wrapper ${styles.header} ${styles.simpleHeader}`}>
       {!isUserLoggedIn ? (
         <div className={styles.header__top}>
+          <Link to={'/'} className={styles.header__btn}>
+            Home
+          </Link>
+          <span className={styles.header__top__line}>|</span>
           <Link to={'/register'} className={styles.header__btn}>
             Registrarse
           </Link>
