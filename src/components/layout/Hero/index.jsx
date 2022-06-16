@@ -4,13 +4,15 @@ import { newsCategories } from '../../../services/newsApi/getNewsCategories';
 
 export function Hero() {
 
-  const {data,loading } = useNewsByCategory({
+  const { data, loading } = useNewsByCategory({
     category: newsCategories.technology.category,
     pageSize: 1
   });
 
   if (loading)  {
-    return <div className={`wrapper ${styles.hero}`}><p>Cargando Imagen</p></div>
+    return <div className={`wrapper ${styles.hero}`}>
+            <p>Cargando Imagen</p>
+          </div>
   }
 
   return (

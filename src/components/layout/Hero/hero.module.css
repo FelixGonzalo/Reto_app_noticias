@@ -1,5 +1,9 @@
 .hero {
   background-color: var(--background-color);
+  background-image: url('/public/assets/images/sinimagen.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 60vh;
   max-height: 500px;
   display: flex;
@@ -10,26 +14,27 @@
 }
 
 .hero__image {
+  display: block;
   width: 100%;
   height: 100%;
 }
 
 .hero__image > img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: none;
 }
 
 .hero__imageDescription {
-  background-color: rgba(30, 30, 30, 0.456);
+  background-color: rgba(22, 22, 22, 0.6);
   position: absolute;
   bottom: 0;
   left: 0;
   filter: none;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
   padding: 1rem;
 }
 .hero__imageDescription > a{
@@ -37,6 +42,7 @@
   font-family: 'Newsreader', serif;
   font-size: 1.5rem;
   text-decoration: none;
+  text-shadow: .5px .5px var(--text-color-gray);
 }
 .hero__imageDescription > a:hover {
   text-decoration: underline;
@@ -44,12 +50,14 @@
 .hero__imageDescription > p {
   display: none;
   font-family: 'Newsreader', serif;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  text-shadow: .5px .5px var(--text-color-gray);
 }
 .hero__imageDescription > small {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  text-shadow: .5px .5px var(--text-color-gray);
 }
 @media (min-width: 768px) {
   .hero__imageDescription > a{
@@ -58,6 +66,5 @@
   .hero__imageDescription > p {
     display: inline;
     font-family: 'Newsreader', serif;
-    font-size: 1.2rem;
   }
 }
