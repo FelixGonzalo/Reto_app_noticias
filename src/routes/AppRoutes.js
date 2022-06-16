@@ -8,6 +8,7 @@ import { NewsByCategory } from '../pages/NewsByCategory'
 import { Register } from '../pages/Register/index.jsx'
 import { UserProfile } from '../pages/UserProfile/index.jsx'
 import NewsBySearch from '../pages/NewsBySearch'
+import NotFound from '../pages/NotFound/index.jsx'
 
 export default function AppRoutes() {
   const { isUserLoggedIn } = useCurrentUser()
@@ -35,6 +36,7 @@ export default function AppRoutes() {
             isUserLoggedIn ? <UserProfile /> : <Navigate to="/" replace />
           }
         />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
       <Footer />
       <ThemeButton/>
