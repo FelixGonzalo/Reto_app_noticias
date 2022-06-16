@@ -18,8 +18,7 @@ export function useNewsBySearch({ search, page }) {
                 setIsError(true);
                 throw new Error(error);
             })
-    // eslint-disable-next-line
-    }, [search])
+    }, [search, page])
 
   return { data, isLoading, isError}
 }
