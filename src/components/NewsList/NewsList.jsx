@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import LoadArticles from './LoadArticles.jsx'
+import LoadingArticle from './LoadingArticle.jsx'
 import styles from './newsList.module.css'
 const Article = lazy(() => import('./Article.jsx'))
 
@@ -8,7 +8,7 @@ const NewsList = ({ data, isLoading, isError }) => {
     return <p>Cargando ... </p>
   }
 
-  if (isError === true) {
+  if (isError) {
     return <p>Ocurrio un error </p>
   }
 
@@ -20,7 +20,7 @@ const NewsList = ({ data, isLoading, isError }) => {
     <div className={styles.newsContent}>
       {data?.map((item, index) => {
         return (
-          <Suspense key={index} fallback={<LoadArticles />}>
+          <Suspense key={index} fallback={<LoadingArticle />}>
             <Article
               title={item.title}
               url={item.url}

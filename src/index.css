@@ -22,6 +22,7 @@
   --text-color-gray: #828282;
   --background-color: #f1f1f1;
   --gray-color: #dbdbdb;
+  --gray-color-2: #cfcfcf;
 }
 :root.dark {
   --primary-color: #f33e3e;
@@ -29,6 +30,7 @@
   --text-color-gray: #c2c2c2;
   --background-color: #242424;
   --gray-color: #454545;
+  --gray-color-2: #505050;
 }
 
 

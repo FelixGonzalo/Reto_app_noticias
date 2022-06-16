@@ -51,6 +51,7 @@
   color: var(--text-color-gray);
   display: flex;
   flex-wrap: wrap;
+  gap: 0 1rem;
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
@@ -58,9 +59,7 @@
   color: var(--text-color-gray);
   word-break: break-all;
 }
-.article__description > small > span:first-child {
-  padding-right: 1rem;
-}
+
 
 @media (min-width: 768px) {
   .article {
