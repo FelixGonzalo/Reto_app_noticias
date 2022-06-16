@@ -4,6 +4,18 @@
 :root {
   --font-logo: 'DM Serif Display', serif;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f1f1f1;
+    --background-color: #242424;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #242424;
+    --background-color: #f1f1f1;
+  }
+}
 :root.light {
   --primary-color: #e23a3a;
   --text-color: #242424;
@@ -12,12 +24,13 @@
   --gray-color: #dbdbdb;
 }
 :root.dark {
-  --primary-color: #e23a3a;
+  --primary-color: #f33e3e;
   --text-color: #f1f1f1;
-  --text-color-gray: #646464;
+  --text-color-gray: #c2c2c2;
   --background-color: #242424;
-  --gray-color: #222222;
+  --gray-color: #454545;
 }
+
 
 * {
   margin: 0;
@@ -36,14 +49,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* 
-  @MEDIA QUERYS
-
-  MOVIL < 600PX
-  TABLET > 600PX
-  DESKTOP > 1024PX
-*/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

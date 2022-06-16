@@ -1,0 +1,13 @@
+.themeButton {
+	background-color: var(--text-color);
+	border-radius: 50%;
+	border: none;
+	bottom: 1rem;
+	color: var(--text-color);
+	cursor: pointer;
+	font-size: 1.3rem;
+	height: 3rem;
+	position: fixed;
+	right: 1rem;
+	width: 3rem;
+}

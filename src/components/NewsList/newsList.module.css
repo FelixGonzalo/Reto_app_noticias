@@ -55,6 +55,7 @@
   margin-bottom: 0.5rem;
 }
 .article__description > small > span {
+  color: var(--text-color-gray);
   word-break: break-all;
 }
 .article__description > small > span:first-child {

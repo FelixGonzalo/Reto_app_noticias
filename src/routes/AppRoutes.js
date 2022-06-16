@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Footer } from '../components/layout/Footer.jsx'
+import ThemeButton from '../components/ThemeButton/index.jsx'
 import { useCurrentUser } from '../hooks/auth/useCurrentUser.js'
 import Home from '../pages/Home'
 import { Login } from '../pages/Login/index.jsx'
@@ -34,6 +35,7 @@ export default function AppRoutes() {
         />
       </Routes>
       <Footer />
+      <ThemeButton/>
     </BrowserRouter>
   )
 }
