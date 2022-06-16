@@ -1,9 +1,12 @@
+import UpdatePassword from '../../components/auth/UpdatePassword';
 import { SimpleHeader } from '../../components/layout/Header'
 import { useCurrentUser } from '../../hooks/auth/useCurrentUser'
 import styles from './userProfile.module.css'
 
 export function UserProfile() {
-  const { currentUser, handleLogout } = useCurrentUser()
+  const { currentUser, handleLogout } = useCurrentUser();
+  
+
   return (
     <>
       <SimpleHeader />
@@ -29,11 +32,15 @@ export function UserProfile() {
             </li>
           </ul>
           <div className={styles.userProfile__options}>
-            <button className={styles.userProfile__btn}>Editar perfil</button>
+
             <button className={styles.userProfile__btn}>
-              Cambiar contraseña
+              Editar perfil
             </button>
           </div>
+
+          <UpdatePassword/>
+
+
           <button
             className={`${styles.userProfile__btn} ${styles.userProfile__btn_logout}`}
             onClick={handleLogout}
