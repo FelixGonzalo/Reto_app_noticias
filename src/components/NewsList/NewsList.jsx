@@ -26,7 +26,7 @@ const NewsList = ({ data, isLoading, isError }) => {
               url={item.url}
               description={item.description}
               author={item.author}
-              source={item.source.name}
+              source={item?.source?.name}
               urlToImage={item.urlToImage}
             />
           </Suspense>

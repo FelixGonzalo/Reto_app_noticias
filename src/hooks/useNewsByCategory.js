@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { getNewsByCategory } from '../services/newsApi/getNewsByCategory'
 
-export function useNewsByCategory({ category, pageSize }) {
+export function useNewsByCategory({ category, pageSize, page }) {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState(null)
 
   useEffect(() => {
     setLoading(true)
-    getNewsByCategory({ category, pageSize })
+    getNewsByCategory({ category, pageSize, page })
       .then((news) => {
         setData(news)
         setLoading(false)
@@ -16,7 +16,7 @@ export function useNewsByCategory({ category, pageSize }) {
         setLoading(false)
         console.error(error)
       })
-  }, [category, pageSize])
+  }, [category, pageSize, page])
 
   return { loading, data }
 }

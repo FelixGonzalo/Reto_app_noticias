@@ -35,7 +35,6 @@
   --input-color: #282828;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -66,9 +65,9 @@ img {
 input {
   background-color: var(--input-color);
   color: var(--text-color);
-  padding: .5rem 1rem;
-  border: .1rem solid var(--gray-color-2);
-  font-size: .9rem;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--gray-color-2);
+  font-size: 0.9rem;
   width: 100%;
 }
 
@@ -77,4 +76,14 @@ input {
   max-width: 1220px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+.message_default {
+  margin: 40px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message_default span {
+  color: var(--primary-color);
 }
