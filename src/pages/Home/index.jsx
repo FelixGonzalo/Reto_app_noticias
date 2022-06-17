@@ -9,6 +9,10 @@ import styles from './home.module.css'
 import { ReadingAssistanceMenu } from '../../components/ReadingAssistanceMenu'
 
 const Home = () => {
+  const { data: heroData, loading: heroLoading } = useNewsByCategory({
+    category: newsCategories.technology.category,
+    pageSize: 1,
+  })
   const { data: businessData, loading: businessLoading } = useNewsByCategory({
     category: newsCategories.business.category,
     pageSize: 4,
@@ -43,7 +47,7 @@ const Home = () => {
     <main className={styles.home}>
       <ReadingAssistanceMenu getTextArray={readingAssistance_getTextArray} />
       <Header />
-      <Hero />
+      <Hero data={heroData} isloading={heroLoading}/>
       <main className={`wrapper ${styles.home__main}`}>
         <section>
           <h3 className={styles.subTitle}>
