@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useUpdatePassword } from '../../../hooks/auth/useUpdatePassword';
+import styles from './updatePassword.module.css';
 
 const UpdatePassword = () => {
 
@@ -15,11 +16,9 @@ const UpdatePassword = () => {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<label>Contraseña Actual</label>
-			<input type="password" value={password} onChange={e => setPassword(e.target.value)}/>
-			<label>Nueva Contraseña</label>
-			<input type="password" value={newPassword} onChange={e => setNewPassword(e.target.value)}/>
-			<button type='submit'>
+			<input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Contraseña actual"/>
+			<input type="password" value={newPassword} onChange={e => setNewPassword(e.target.value)} placeholder="Nueva Contraseña"/>
+			<button type='submit' className={styles.btn}>
 				Cambiar contraseña
 			</button>
 			{message && <p>{message}</p>}

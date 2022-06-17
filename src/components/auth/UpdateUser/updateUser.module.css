@@ -1,0 +1,22 @@
+.btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  font-size: 15px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+  background: var(--background-color);
+}
+
+.btn:hover {
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+
+input{
+  margin-top: .3rem;
+  margin-bottom: .5rem;
+}
