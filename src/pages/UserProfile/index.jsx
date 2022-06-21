@@ -1,5 +1,6 @@
 import UpdatePassword from '../../components/auth/UpdatePassword';
 import UpdateUser from '../../components/auth/UpdateUser';
+import LastSearch from '../../components/LastSearch';
 import { SimpleHeader } from '../../components/layout/Header'
 import { useCurrentUser } from '../../hooks/auth/useCurrentUser'
 import styles from './userProfile.module.css'
@@ -43,6 +44,10 @@ export function UserProfile() {
             <UpdateUser />
             <UpdatePassword/>
           </div>
+        </div>
+
+        <div>
+          <LastSearch />
         </div>
       </main>
     </>

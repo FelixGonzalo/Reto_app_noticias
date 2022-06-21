@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useLastSearch } from '../../hooks/utils/useLastSearch';
 import styles from './newsSearch.module.css';
 
 const NewsSearch = ({setSearchSubmit}) => {
@@ -7,11 +8,14 @@ const NewsSearch = ({setSearchSubmit}) => {
 	const [searchInput,setSearchInput] = useState('');
 	const navigate = useNavigate();
 
+	const {saveLastSearch} = useLastSearch()
+
 	const handleSubmitSearch = (e) => {
     e.preventDefault();
 		if(searchInput.length > 0){
 			setSearchSubmit(searchInput);
 			setSearchInput('');
+			saveLastSearch(searchInput);
 			navigate('/noticias/search/' + searchInput);
 		}
   }
