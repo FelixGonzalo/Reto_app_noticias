@@ -10,11 +10,16 @@ export function NewsByCategory() {
   let { category } = useParams()
   const { data, loading, isTheEnd } = useNewsByCategoryWithInfiniteScroll({
     category: category,
-    pageSize: 4,
+    pageSize: 10,
   })
+
+  const categoryName = newsCategories[category]?.categoria
+    ? newsCategories[category].categoria
+    : category
 
   const readingAssistance_getTextArray = () => {
     let textArray = []
+    if (data.length > 0) textArray.push(`En ${categoryName}.`)
     data.forEach((item) => {
       textArray.push(item.title)
     })
@@ -26,17 +31,14 @@ export function NewsByCategory() {
       <ReadingAssistanceMenu getTextArray={readingAssistance_getTextArray} />
       <SimpleHeader />
       <main className="wrapper">
-        <h1 style={{ marginLeft: '5px' }}>
-          | Noticias sobre {newsCategories[category].categoria}
-        </h1>
+        <h1 style={{ marginLeft: '5px' }}>| Noticias sobre {categoryName}</h1>
         <br />
         <br />
         <NewsList data={data} isloading={loading} />
         {loading && <Loader />}
-        {isTheEnd && (
+        {isTheEnd && data.length > 0 && (
           <p className="message_default">
-            Has revisado todas las noticias sobre{' '}
-            <span>{newsCategories[category].categoria}</span>
+            Has revisado todas las noticias sobre <span>{categoryName}</span>
           </p>
         )}
       </main>

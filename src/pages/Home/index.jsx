@@ -31,12 +31,19 @@ const Home = () => {
 
   const readingAssistance_getTextArray = () => {
     let textArray = []
+    if (heroData.length > 0) textArray.push('En la Portada de hoy. ')
+    heroData.forEach((item) => {
+      textArray.push(item.title)
+    })
+    if (heroData.length > 0) textArray.push('En entretenimiento. ')
     entertainmentData.forEach((item) => {
       textArray.push(item.title)
     })
+    if (heroData.length > 0) textArray.push('En deportes. ')
     sportsData.forEach((item) => {
       textArray.push(item.title)
     })
+    if (heroData.length > 0) textArray.push('En negocios. ')
     businessData.forEach((item) => {
       textArray.push(item.title)
     })
@@ -47,7 +54,7 @@ const Home = () => {
     <main className={styles.home}>
       <ReadingAssistanceMenu getTextArray={readingAssistance_getTextArray} />
       <Header />
-      <Hero data={heroData} isloading={heroLoading}/>
+      <Hero data={heroData} isloading={heroLoading} />
       <main className={`wrapper ${styles.home__main}`}>
         <section>
           <h3 className={styles.subTitle}>

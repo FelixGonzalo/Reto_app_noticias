@@ -17,9 +17,14 @@ export default function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destacados" element={<h1>Destacados</h1>} />
-        <Route path="/noticias" element={<Navigate to="/noticias/search/actualidad" replace />} />
-        <Route path="/noticias/search" element={<Navigate to="/noticias/search/actualidad" replace />} />
+        <Route
+          path="/noticias"
+          element={<Navigate to="/noticias/search/actualidad" replace />}
+        />
+        <Route
+          path="/noticias/search"
+          element={<Navigate to="/noticias/search/actualidad" replace />}
+        />
         <Route path="/noticias/search/:search" element={<NewsBySearch />} />
         <Route path="/noticias/:category" element={<NewsByCategory />} />
         <Route
@@ -36,10 +41,10 @@ export default function AppRoutes() {
             isUserLoggedIn ? <UserProfile /> : <Navigate to="/" replace />
           }
         />
-        <Route path="*" element={<NotFound/>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-      <ThemeButton/>
+      <ThemeButton />
     </BrowserRouter>
   )
 }
