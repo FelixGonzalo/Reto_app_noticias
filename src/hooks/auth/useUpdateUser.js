@@ -4,11 +4,11 @@ import { updateUser } from '../../services/authARC/updateUser'
 export function useUpdateUser() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-	const [ success, setSuccess ] = useState(false)
+  const [success, setSuccess] = useState(false)
 
-	let token = localStorage.getItem('userToken');
-  token = (JSON.parse(token));
-  token = token?.accessToken;
+  let token = localStorage.getItem('userToken')
+  token = JSON.parse(token)
+  token = token?.accessToken
 
   const handleUpdateUser = async ({
     firstName,
@@ -21,7 +21,7 @@ export function useUpdateUser() {
       setLoading(true)
       setError(false)
       const res = await updateUser({
-				token,
+        token,
         firstName,
         lastName,
         secondLastName,
@@ -29,9 +29,9 @@ export function useUpdateUser() {
         phone,
       })
       setLoading(false)
-			setSuccess(true)
-      console.log(res)
-      return res;
+      setSuccess(true)
+      localStorage.setItem('userProfile', JSON.stringify(res))
+      return res
     } catch (error) {
       setLoading(false)
       setError(true)
@@ -39,5 +39,5 @@ export function useUpdateUser() {
     }
   }
 
-  return { handleUpdateUser, loading, error , success}
+  return { handleUpdateUser, loading, error, success }
 }

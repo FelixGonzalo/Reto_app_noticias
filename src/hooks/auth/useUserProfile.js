@@ -14,7 +14,7 @@ export function useUserProfile() {
       const res = await getUserProfile({ token })
       setLoading(false)
       if (!res.hasOwnProperty('email')) {
-        localStorage.removeItem('userProfile')
+        // localStorage.removeItem('userProfile')
         setError(true)
         setErrorInfo(res)
         return null
