@@ -13,7 +13,7 @@ export function Footer() {
         {categories.map((item) => (
           <li key={item.categoria}>
             <Link
-              to={`/noticias/${item.category}`}
+              to={`/noticias/reload/${item.category}`}
               className={`wrapper ${styles.footer__link}`}
             >
               {item.categoria}

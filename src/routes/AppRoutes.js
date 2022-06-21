@@ -1,5 +1,12 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { Footer } from '../components/layout/Footer.jsx'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useNavigate,
+  useParams,
+} from 'react-router-dom'
+import { Footer } from '../components/layout/Footer'
 import ThemeButton from '../components/ThemeButton/index.jsx'
 import { useCurrentUser } from '../hooks/auth/useCurrentUser.js'
 import Home from '../pages/Home'
@@ -27,6 +34,10 @@ export default function AppRoutes() {
           element={<Navigate to="/noticias/search/actualidad" replace />}
         />
         <Route path="/noticias/search/:search" element={<NewsBySearch />} />
+        <Route
+          path="/noticias/reload/:data"
+          element={<ReloadPage baseURL={'/noticias'} />}
+        />
         <Route path="/noticias/:category" element={<NewsByCategory />} />
         <Route
           path="/login"
@@ -58,4 +69,9 @@ export default function AppRoutes() {
       <ThemeButton />
     </BrowserRouter>
   )
+}
+
+function ReloadPage({ baseURL }) {
+  let { data } = useParams()
+  return <Navigate to={`${baseURL}/${data}`} replace />
 }
