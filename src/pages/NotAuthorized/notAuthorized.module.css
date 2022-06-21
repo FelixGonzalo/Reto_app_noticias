@@ -1,0 +1,27 @@
+.notAuthorized__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.notAuthorized__container > img {
+  display: block;
+  width: 100%;
+  height: fit-content;
+  max-width: 25rem;
+}
+.notAuthorized__container > a {
+  margin-top: 2rem;
+  background-color: var(--primary-color);
+  display: block;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}

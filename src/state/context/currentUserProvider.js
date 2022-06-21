@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from 'react'
+import { logoutUser } from '../../services/authARC/logoutUser'
 
 export const currentUserContext = createContext()
 
@@ -9,7 +10,7 @@ const initialValue = {
 
 const CurrentUserProvider = (props) => {
   const [currentUser, setCurrentUser] = useState(initialValue)
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(true)
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
 
   useEffect(() => {
     checkCurrentUser()
@@ -32,6 +33,9 @@ const CurrentUserProvider = (props) => {
   const logoutCurrentUser = () => {
     setCurrentUser(initialValue)
     setIsUserLoggedIn(false)
+    logoutUser({ token: currentUser?.userToken?.accessToken }).then((res) => {
+      if (res) console.log('logout ok')
+    })
   }
 
   return (
@@ -39,8 +43,8 @@ const CurrentUserProvider = (props) => {
       value={{
         currentUser,
         checkCurrentUser,
-        isUserLoggedIn,
         logoutCurrentUser,
+        isUserLoggedIn,
       }}
     >
       {props.children}

@@ -22,7 +22,17 @@ export function RegisterForm() {
         *Nombre
       </label>
       <input
-        {...register('firstName', { required: true })}
+        {...register('firstName', {
+          required: 'El nombre es requerido. ',
+          maxLength: {
+            value: 20,
+            message: 'El nombre debe tener un máximo de 20 caracteres. ',
+          },
+          pattern: {
+            value: /[a-zA-Z ]{2,254}$/,
+            message: 'El nombre no debe contener números. ',
+          },
+        })}
         id="firstName"
         className={styles.loginForm__input}
       />
@@ -30,7 +40,18 @@ export function RegisterForm() {
         *Apellido Paterno
       </label>
       <input
-        {...register('lastName', { required: true })}
+        {...register('lastName', {
+          required: 'El apellido paterno es requerido. ',
+          maxLength: {
+            value: 20,
+            message:
+              'El apellido paterno debe tener un máximo de 20 caracteres. ',
+          },
+          pattern: {
+            value: /[a-zA-Z ]{2,254}$/,
+            message: 'El apellido paterno no debe contener números. ',
+          },
+        })}
         id="lastName"
         className={styles.loginForm__input}
       />
@@ -38,7 +59,18 @@ export function RegisterForm() {
         *Apellido Materno
       </label>
       <input
-        {...register('secondLastName', { required: true })}
+        {...register('secondLastName', {
+          required: 'El apellido materno es requerido. ',
+          maxLength: {
+            value: 20,
+            message:
+              'El apellido materno debe tener un máximo de 20 caracteres. ',
+          },
+          pattern: {
+            value: /[a-zA-Z ]{2,254}$/,
+            message: 'El apellido materno no debe contener números. ',
+          },
+        })}
         id="secondLastName"
         className={styles.loginForm__input}
       />
@@ -46,7 +78,18 @@ export function RegisterForm() {
         *Correo
       </label>
       <input
-        {...register('email', { required: true })}
+        {...register('email', {
+          required: 'El correo es requerido. ',
+          maxLength: {
+            value: 100,
+            message: 'El correo debe tener un máximo de 100 caracteres. ',
+          },
+          pattern: {
+            value:
+              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            message: 'El correo no es valido. ',
+          },
+        })}
         id="email"
         className={styles.loginForm__input}
       />
@@ -62,7 +105,17 @@ export function RegisterForm() {
         *Contraseña
       </label>
       <input
-        {...register('password', { required: true })}
+        {...register('password', {
+          required: 'La contraseña es requerida. ',
+          maxLength: {
+            value: 100,
+            message: 'La contraseña debe tener un máximo de 100 caracteres. ',
+          },
+          minLength: {
+            value: 8,
+            message: 'La contraseña debe tener un mínimo de 8 caracteres. ',
+          },
+        })}
         id="password"
         type="password"
         autoComplete="on"
@@ -72,16 +125,15 @@ export function RegisterForm() {
         Registrarse
       </button>
       <div className={styles.loginForm__status}>
-        {errors.firstName && <span>El nombre es requerido. </span>}
-        {errors.lastName && <span>El apellido paterno es requerido. </span>}
-        {errors.secondLastName && (
-          <span>El apellido materno es requerido. </span>
-        )}
-        {errors.email && <span>El correo es requerido. </span>}
-        {errors.password && <span>La contraseña es requerida. </span>}
-        {loading && <span>Registrando usuario... </span>}
-        {error && <span>Error al registrar el usuario. </span>}
-        {errorInfo && <span>{errorInfo?.message}</span>}
+        {errors?.firstName && <p>{errors?.firstName?.message} </p>}
+        {errors?.lastName && <p>{errors?.lastName?.message} </p>}
+        {errors?.secondLastName && <p>{errors?.secondLastName?.message} </p>}
+        {errors?.email && <p>{errors?.email?.message} </p>}
+        {errors?.password && <p>{errors?.password?.message}</p>}
+
+        {loading && <p>Registrando usuario... </p>}
+        {error && <p>Error al registrar el usuario. </p>}
+        {errorInfo && <p>{errorInfo?.message}</p>}
       </div>
     </form>
   )

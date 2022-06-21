@@ -9,6 +9,8 @@ export function useCurrentUser() {
     logoutCurrentUser()
     localStorage.removeItem('userToken')
     localStorage.removeItem('userProfile')
+    localStorage.removeItem('lastSearch')
+    window.location.href = '/'
   }
 
   return {

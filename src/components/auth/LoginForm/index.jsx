@@ -11,12 +11,14 @@ export function LoginForm() {
     error: loginError,
     errorInfo: loginErrorInfo,
   } = useLogin()
+
   const {
     handleUserProfile,
     loading: userProfileLoading,
     error: userProfileError,
     errorInfo: userProfileErrorInfo,
   } = useUserProfile()
+
   const { checkCurrentUser } = useCurrentUser()
 
   const {
@@ -37,7 +39,18 @@ export function LoginForm() {
         Correo
       </label>
       <input
-        {...register('email', { required: true })}
+        {...register('email', {
+          required: 'El correo es requerido. ',
+          maxLength: {
+            value: 100,
+            message: 'El correo debe tener un máximo de 100 caracteres. ',
+          },
+          pattern: {
+            value:
+              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            message: 'El correo no es valido. ',
+          },
+        })}
         id="email"
         className={styles.loginForm__input}
       />
@@ -45,7 +58,17 @@ export function LoginForm() {
         Contraseña
       </label>
       <input
-        {...register('password', { required: true })}
+        {...register('password', {
+          required: 'La constraseña es requerida. ',
+          maxLength: {
+            value: 100,
+            message: 'La contraseña debe tener un máximo de 100 caracteres. ',
+          },
+          minLength: {
+            value: 8,
+            message: 'La contraseña debe tener un mínimo de 8 caracteres. ',
+          },
+        })}
         id="password"
         type="password"
         autoComplete="on"
@@ -55,17 +78,15 @@ export function LoginForm() {
         Iniciar sesión
       </button>
       <div className={styles.loginForm__status}>
-        {(errors.email || errors.password) && (
-          <span>El correo y contraseña son requeridos. </span>
-        )}
-        {loginLoading && <span>Iniciando sesión... </span>}
-        {loginError && <span>Error al iniciar sesión </span>}
-        {userProfileLoading && <span>Cargando perfil del usuario... </span>}
-        {userProfileError && (
-          <span>Error al cargar el perfil del usuario </span>
-        )}
-        {loginErrorInfo && <span>{loginErrorInfo?.message}. </span>}
-        {userProfileErrorInfo && <span>{userProfileErrorInfo?.message}. </span>}
+        {errors?.email && <p>{errors?.email?.message}</p>}
+        {errors?.password && <p>{errors?.password?.message}</p>}
+
+        {loginLoading && <p>Iniciando sesión... </p>}
+        {loginError && <p>Error al iniciar sesión </p>}
+        {userProfileLoading && <p>Cargando perfil del usuario... </p>}
+        {userProfileError && <p>Error al cargar el perfil del usuario </p>}
+        {loginErrorInfo && <p>{loginErrorInfo?.message}. </p>}
+        {userProfileErrorInfo && <p>{userProfileErrorInfo?.message}. </p>}
       </div>
     </form>
   )

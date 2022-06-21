@@ -9,6 +9,7 @@ import { Register } from '../pages/Register/index.jsx'
 import { UserProfile } from '../pages/UserProfile/index.jsx'
 import NewsBySearch from '../pages/NewsBySearch'
 import NotFound from '../pages/NotFound/index.jsx'
+import { NotAuthorized } from '../pages/NotAuthorized/index.jsx'
 
 export default function AppRoutes() {
   const { isUserLoggedIn } = useCurrentUser()
@@ -29,17 +30,27 @@ export default function AppRoutes() {
         <Route path="/noticias/:category" element={<NewsByCategory />} />
         <Route
           path="/login"
-          element={isUserLoggedIn ? <Navigate to="/" replace /> : <Login />}
+          element={
+            isUserLoggedIn ? (
+              <Navigate to="/usuario/perfil" replace />
+            ) : (
+              <Login />
+            )
+          }
         />
         <Route
           path="/register"
-          element={isUserLoggedIn ? <Navigate to="/" replace /> : <Register />}
+          element={
+            isUserLoggedIn ? (
+              <Navigate to="/usuario/perfil" replace />
+            ) : (
+              <Register />
+            )
+          }
         />
         <Route
           path="/usuario/perfil"
-          element={
-            isUserLoggedIn ? <UserProfile /> : <Navigate to="/" replace />
-          }
+          element={isUserLoggedIn ? <UserProfile /> : <NotAuthorized />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
