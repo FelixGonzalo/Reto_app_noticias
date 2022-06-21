@@ -1,0 +1,18 @@
+.lastArticles {
+	display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+/* @media (min-width: 768px) {
+  
+} */
+
+@media (min-width: 1200px) {
+  .lastArticles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+}

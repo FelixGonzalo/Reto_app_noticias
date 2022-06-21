@@ -1,25 +1,36 @@
-import NewsList from '../NewsList/NewsList';
-import { useNewsBySearch } from '../../hooks/useNewsBySearch'
 import { useLastSearch } from '../../hooks/utils/useLastSearch';
+import Article from '../NewsList/Article';
+import styles from './lastsearch.module.css'
 
 const LastSearch = () => {
 
-	const { lastSearch } = useLastSearch();
-	
-	const { data } = useNewsBySearch({
-		search: lastSearch,
-		pageSize: 4,
-		page: 1
-	});
+	const { lastSearch, lastArticles } = useLastSearch();
 
-	console.log(lastSearch);
-
+	if(lastSearch?.length === 0 || !lastArticles){
+		return (
+			<p>No se encontraron resultados de la última búsqueda</p>
+		)
+	}
 	
 	return (
 		<div>
 			<h2>Última Búsqueda</h2>
 			<h2>| {lastSearch}</h2>
-			<NewsList data={data}/>
+			<div className={styles.lastArticles}>
+				{
+					lastArticles?.map(item => (
+						<Article
+							key={item.title}
+							title={item.title}
+							url={item.url}
+							description={item.description}
+							author={item.author}
+							source={item.source}
+							urlToImage={item.urlToImage}
+						/>
+					))
+				}
+			</div>
 		</div>
 	)
 }

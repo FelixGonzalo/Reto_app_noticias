@@ -14,6 +14,7 @@ const NewsBySearch = () => {
   
   const [page] = useState(1)
   const [searchSubmit,setSearchSubmit] = useState(searchParams);
+  const [isPageSearch] = useState(true);
   
   const {saveLastSearch} = useLastSearch();
   
@@ -39,7 +40,7 @@ const NewsBySearch = () => {
           }
           <p>Página {page}</p>
         </div>
-        <NewsList data={data} isloading={isloading} isError={isError}/>
+        <NewsList data={data} isloading={isloading} isError={isError} isPageSearch={isPageSearch}/>
       </main>
     </>
   )
