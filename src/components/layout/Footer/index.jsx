@@ -2,7 +2,7 @@ import styles from './footer.module.css'
 import { newsCategories } from '../../../services/newsApi/getNewsCategories'
 import { Link } from 'react-router-dom'
 
-export function Footer() {
+export default function Footer() {
   const categories = Object.values(newsCategories)
 
   return (

@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-
+@font-face {
+  font-family: 'DM Serif Display';
+  src: local('DM Serif Display'), url('/public/assets/fonts/DMSerifDisplayRegular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-weight: 400;
+  src: local('Newsreader'), url('/public/assets/fonts/NewsreaderRegular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Newsreader';
+  font-weight: 500;
+  src: local('Newsreader'), url('/public/assets/fonts/NewsreaderSemiBold.woff2') format('woff2');
+}
 :root {
   --font-logo: 'DM Serif Display', serif;
+  --font-article: 'Newsreader', serif;
+  --font-r: 400;
+  --font-sm: 500;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #f1f1f1;
-    --background-color: #242424;
-  }
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --text-color: #242424;
-    --background-color: #f1f1f1;
-  }
-}
+
 :root.light {
   --primary-color: #e23a3a;
   --text-color: #242424;

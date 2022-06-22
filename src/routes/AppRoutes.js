@@ -6,8 +6,6 @@ import {
   Navigate,
   useParams,
 } from 'react-router-dom'
-import ThemeButton from '../components/ThemeButton/index.jsx'
-import { Footer } from '../components/layout/Footer'
 import { Loader } from '../components/loaders/Loader'
 import { useCurrentUser } from '../hooks/auth/useCurrentUser.js'
 
@@ -19,6 +17,9 @@ const UserProfile = lazy(() => import( '../pages/UserProfile'));
 const NewsBySearch = lazy(() => import( '../pages/NewsBySearch'));
 const NotFound = lazy(() => import( '../pages/NotFound'));
 const NotAuthorized = lazy(() => import( '../pages/NotAuthorized'));
+
+const ThemeButton = lazy(() => import( '../components/ThemeButton'));
+const Footer = lazy(() => import( '../components/layout/Footer'));
 
 export default function AppRoutes() {
   const { isUserLoggedIn } = useCurrentUser()

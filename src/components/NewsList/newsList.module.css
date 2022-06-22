@@ -38,14 +38,14 @@
   text-decoration: underline;
 }
 .article__description > a > h3.title {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-article);
   font-size: 1.35rem;
-  font-weight: 500;
+  font-weight: var(--font-sm);
 }
 .article__description > p {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font-article);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: var(--font-r);
 }
 .article__description > small {
   color: var(--text-color-gray);

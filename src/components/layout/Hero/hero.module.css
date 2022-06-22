@@ -43,18 +43,22 @@
 }
 .hero__card__description > a{
   color: white;
-  font-family: 'Newsreader', serif;
-  font-size: 1.35rem;
+  font-family: var(--font-logo);
+  font-size: 1.1rem;
   text-decoration: none;
   text-shadow: .5px .5px var(--text-color-gray);
 }
 .hero__card__description > a:hover {
   text-decoration: underline;
 }
+.hero__card__description > a > h2 {
+  font-weight: var(--font-sm);
+}
 .hero__card__description> p {
   display: none;
-  font-family: 'Newsreader', serif;
-  font-size: 1.2rem;
+  font-family: var(--font-article);
+  font-size: 1.1rem;
+  font-weight: var(--font-r);
   text-shadow: .5px .5px var(--text-color-gray);
 }
 .hero__card__description > small {
@@ -65,10 +69,10 @@
 }
 @media (min-width: 768px) {
   .hero__card__description > a{
-    font-size: 1.55rem;
+    font-size: 1.4rem;
   }
   .hero__card__description > p {
     display: inline;
-    font-family: 'Newsreader', serif;
+    font-family: var(--font-article);
   }
 }
