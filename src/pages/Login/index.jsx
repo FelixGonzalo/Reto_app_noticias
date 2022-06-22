@@ -3,7 +3,7 @@ import { LoginForm } from '../../components/auth/LoginForm'
 import { SimpleHeader } from '../../components/layout/Header'
 import styles from './login.module.css'
 
-export function Login() {
+function Login() {
   return (
     <>
       <SimpleHeader />
@@ -31,3 +31,5 @@ export function Login() {
     </>
   )
 }
+
+export default Login;

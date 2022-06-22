@@ -5,9 +5,8 @@ import NewsList from '../../components/NewsList/NewsList'
 import { ReadingAssistanceMenu } from '../../components/ReadingAssistanceMenu'
 import { useNewsByCategoryWithInfiniteScroll } from '../../hooks/useNewsByCategoryWithInfiniteScroll'
 import { newsCategories } from '../../services/newsApi/getNewsCategories'
-import { Footer } from '../../components/layout/Footer'
 
-export function NewsByCategory() {
+function NewsByCategory() {
   let { category } = useParams()
   const { data, loading, isTheEnd } = useNewsByCategoryWithInfiniteScroll({
     category: category,
@@ -46,3 +45,5 @@ export function NewsByCategory() {
     </>
   )
 }
+
+export default NewsByCategory;

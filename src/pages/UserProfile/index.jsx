@@ -6,7 +6,7 @@ import { SimpleHeader } from '../../components/layout/Header'
 import { useCurrentUser } from '../../hooks/auth/useCurrentUser'
 import styles from './userProfile.module.css'
 
-export function UserProfile() {
+function UserProfile() {
   const { currentUser, handleLogout } = useCurrentUser()
 
   return (
@@ -56,3 +56,5 @@ export function UserProfile() {
     </>
   )
 }
+
+export default UserProfile

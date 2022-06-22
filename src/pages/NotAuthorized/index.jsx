@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './notAuthorized.module.css'
 
-export const NotAuthorized = () => {
+const NotAuthorized = () => {
   return (
     <div className={styles.notAuthorized__container}>
       <img src="/assets/images/notAuthorized.svg" alt="not Authorized" />
@@ -11,3 +11,5 @@ export const NotAuthorized = () => {
     </div>
   )
 }
+
+export default NotAuthorized

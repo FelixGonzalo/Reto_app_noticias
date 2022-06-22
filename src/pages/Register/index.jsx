@@ -3,7 +3,7 @@ import { RegisterForm } from '../../components/auth/RegisterForm'
 import { SimpleHeader } from '../../components/layout/Header'
 import styles from '../Login/login.module.css'
 
-export function Register() {
+function Register() {
   return (
     <>
       <SimpleHeader />
@@ -31,3 +31,5 @@ export function Register() {
     </>
   )
 }
+
+export default Register

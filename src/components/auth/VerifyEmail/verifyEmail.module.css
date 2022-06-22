@@ -14,7 +14,7 @@
 .verifyEmail_options {
   margin-top: 15px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 10px;
 }
