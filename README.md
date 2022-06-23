@@ -7,7 +7,7 @@ El proyecto es un [reto técnico](https://github.com/cocotopia/reto-app-noticias
 
 La Portada es una web de noticias recientes y en español. Todo el acontecer del mundo en un solo lugar.
 
-![La Portada](./portada.png)
+![Captura del proyecto La Portada](./portada.png)
 
 ### 📝 Requerimientos
 
@@ -23,6 +23,24 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 10. Verificar correo.
 11. Cambiar de contraseña.
 12. Editar perfil del usuario.
+
+## 📦 Estructura de carpetas
+
+```
+├── public
+│   └── assets
+│       ├── fonts
+│       └── images
+└── src
+    ├── components
+    ├── hooks
+    ├── pages
+    ├── routes
+    ├── services
+    └── state
+        └── context
+
+```
 
 ## 👥 El equipo
 
@@ -43,6 +61,15 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 - ARC Identity API
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Pure CSS Loaders](https://loading.io/css/)
+
+## 💯 Trabajo en equipo
+
+- Organización del equipo y tareas con tablero Kanban en Trello.
+- Creación del repo del proyecto con ramas main y dev en GitHub.
+- Revisión y feedback de cada avance.
+- Repartir nuevas tareas en cada reunión.
+
+![Tablero Kanban del proyecto](./portada2.png)
 
 ## Available Scripts
 
