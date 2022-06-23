@@ -3,13 +3,13 @@
 El proyecto es un [reto técnico](https://github.com/cocotopia/reto-app-noticias) dentro de la escuelita de
 [RPA Latam](https://rpalatam.com.pe/).
 
-## 👥 Acerca del proyecto
+## ⭐ Acerca del proyecto
 
 La Portada es una web de noticias recientes y en español. Todo el acontecer del mundo en un solo lugar.
 
 ![La Portada](./portada.png)
 
-### Requerimientos
+### 📝 Requerimientos
 
 1. Página Inicio con la portada del día y noticias por categoría.
 2. Página de Noticias por categoría con Scroll infinito.
@@ -30,7 +30,7 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 - [Joel Garay](https://www.linkedin.com/in/joel-isaac-garay-chuquispuma-566215220)
 - [Jose Vera](https://www.linkedin.com/in/jose-miguel-vera-mamani-b03b49207)
 
-## 🛠️ Técnologias
+## 🛠️ Técnologias y recursos
 
 - [Reactjs](https://es.reactjs.org/)
 - [React Router](https://reactrouter.com/)
@@ -41,9 +41,6 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 - Mobile-first workflow
 - [News API](https://newsapi.org/)
 - ARC Identity API
-
-## 🛠️ Recursos
-
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Pure CSS Loaders](https://loading.io/css/)
 
