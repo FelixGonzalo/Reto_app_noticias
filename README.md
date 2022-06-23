@@ -1,6 +1,51 @@
-# Getting Started with Create React App
+# RETO APP NOTICIAS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El proyecto es un [reto técnico](https://github.com/cocotopia/reto-app-noticias) dentro de la escuelita de
+[RPA Latam](https://rpalatam.com.pe/).
+
+## 👥 Acerca del proyecto
+
+La Portada es una web de noticias recientes y en español. Todo el acontecer del mundo en un solo lugar.
+
+![La Portada](./portada.png)
+
+### Requerimientos
+
+1. Página Inicio con la portada del día y noticias por categoría.
+2. Página de Noticias por categoría con Scroll infinito.
+3. Buscador de noticias.
+4. Última búsqueda del usuario.
+5. Asistente de lectura.
+6. Modo oscuro inteligente.
+7. Registrar usuario.
+8. Iniciar sesión.
+9. Mostrar perfil de usuario.
+10. Verificar correo.
+11. Cambiar de contraseña.
+12. Editar perfil del usuario.
+
+## 👥 El equipo
+
+- [Felix Castro](https://www.linkedin.com/in/felix-castro-cubas-633037192)
+- [Joel Garay](https://www.linkedin.com/in/joel-isaac-garay-chuquispuma-566215220)
+- [Jose Vera](https://www.linkedin.com/in/jose-miguel-vera-mamani-b03b49207)
+
+## 🛠️ Técnologias
+
+- [Reactjs](https://es.reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- React Hooks
+- React Context
+- CSS module, Flexbox, CSS Grid
+- Mobile-first workflow
+- [News API](https://newsapi.org/)
+- ARC Identity API
+
+## 🛠️ Recursos
+
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Pure CSS Loaders](https://loading.io/css/)
 
 ## Available Scripts
 
@@ -38,33 +83,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
