@@ -3,7 +3,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh
+	height: 100vh;
+	padding: 1rem;
 }
 
 .notFound__container > img {
@@ -11,6 +12,12 @@
 	width: 100%;
 	height: fit-content;
 	max-width: 25rem;
+}
+.notFound__container > h2 {
+	text-align: center;
+}
+.notFound__container > p {
+	text-align: center;
 }
 .notFound__container > a {
 	margin-top: 2rem;

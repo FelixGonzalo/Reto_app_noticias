@@ -68,7 +68,7 @@ export default function AppRoutes() {
             path="/usuario/perfil"
             element={isUserLoggedIn ? <UserProfile /> : <NotAuthorized />}
           />
-          <Route path="* " element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
         <ThemeButton />
