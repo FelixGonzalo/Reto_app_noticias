@@ -23,6 +23,10 @@
   margin-top: -15px;
 }
 
+.home__main_section {
+  min-height: 500px;
+}
+
 @media screen and (min-width: 768px) {
   .subTitle {
     margin: 2rem 0;

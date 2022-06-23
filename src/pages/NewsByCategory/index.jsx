@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useParams } from 'react-router-dom'
 import { SimpleHeader } from '../../components/layout/Header'
 import { Loader } from '../../components/loaders/Loader'
@@ -28,6 +29,13 @@ function NewsByCategory() {
 
   return (
     <>
+      <Helmet>
+        <title>Noticias sobre {categoryName} | La Portada</title>
+        <meta
+          name="description"
+          content={`"Noticias sobre ${categoryName} en La Portada. Noticias recientes y en español."`}
+        />
+      </Helmet>
       <ReadingAssistanceMenu getTextArray={readingAssistance_getTextArray} />
       <SimpleHeader />
       <main className="wrapper">
@@ -46,4 +54,4 @@ function NewsByCategory() {
   )
 }
 
-export default NewsByCategory;
+export default NewsByCategory

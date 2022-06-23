@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import UpdatePassword from '../../components/auth/UpdatePassword'
 import UpdateUser from '../../components/auth/UpdateUser'
 import { VerifyEmail } from '../../components/auth/VerifyEmail'
@@ -11,6 +12,13 @@ function UserProfile() {
 
   return (
     <>
+      <Helmet>
+        <title>Perfil | La Portada</title>
+        <meta
+          name="description"
+          content="Perfil en La Portada. Una web de noticias recientes y en español. Todo el acontecer del mundo en un solo lugar."
+        />
+      </Helmet>
       <SimpleHeader />
       <VerifyEmail />
       <main className="wrapper">
