@@ -4,9 +4,14 @@ import LoadingArticle from './LoadingArticle.jsx'
 import styles from './newsList.module.css'
 const Article = lazy(() => import('./Article.jsx'))
 
-const NewsList = ({ data, isLoading, isError, isPageSearch }) => {
-
-  const { saveLastArticles } = useLastSearch();
+const NewsList = ({
+  data,
+  isLoading,
+  isError,
+  isPageSearch,
+  loadingAsync = false,
+}) => {
+  const { saveLastArticles } = useLastSearch()
 
   if (isLoading) {
     return <p>Cargando ... </p>
@@ -21,21 +26,20 @@ const NewsList = ({ data, isLoading, isError, isPageSearch }) => {
   }
 
   if (isPageSearch) {
-    const lastArticles = [];
-      
-    data?.map((item, index ) => 
-        index < 6
-        ?
-        lastArticles.push({
-          title: item.title,
-          url: item.url,
-          description: item.description,
-          author: item.author,
-          source: item?.source?.name,
-          urlToImage: item.urlToImage
-        }) 
+    const lastArticles = []
+
+    data?.map((item, index) =>
+      index < 6
+        ? lastArticles.push({
+            title: item.title,
+            url: item.url,
+            description: item.description,
+            author: item.author,
+            source: item?.source?.name,
+            urlToImage: item.urlToImage,
+          })
         : ''
-    )  
+    )
     saveLastArticles(lastArticles)
   }
 
@@ -52,6 +56,7 @@ const NewsList = ({ data, isLoading, isError, isPageSearch }) => {
                 author={item.author}
                 source={item?.source?.name}
                 urlToImage={item.urlToImage}
+                loadingAsync={loadingAsync}
               />
             </Suspense>
           )

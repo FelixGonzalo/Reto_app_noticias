@@ -19,7 +19,7 @@
 }
 
 .footer__list li {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 .footer__list li:first-child {
@@ -43,5 +43,8 @@
 @media screen and (min-width: 1200px) {
   .footer {
     padding: 3rem 0 2rem;
+  }
+  .footer__list li {
+    margin-bottom: 15px;
   }
 }

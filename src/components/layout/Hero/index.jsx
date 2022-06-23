@@ -1,27 +1,23 @@
-import HeroCard from './HeroCard';
+import HeroCard from './HeroCard'
 import styles from './hero.module.css'
 
 export function Hero({ data, isloading }) {
-
-
-  if (isloading)  {
+  if (isloading) {
     return (
       <div className={`wrapper ${styles.hero}`}>
         <p>Cargando Imagen ... </p>
       </div>
     )
-  } 
+  }
 
   return (
     <div className={styles.hero}>
-      {
-        data?.length === 0
-        ?
+      {data?.length === 0 ? (
         <p>No Disponible</p>
-        :
-        data?.map((item,i) => {
+      ) : (
+        data?.map((item, i) => {
           return (
-            <HeroCard 
+            <HeroCard
               key={i}
               urlToImage={item.urlToImage}
               url={item.url}
@@ -32,7 +28,7 @@ export function Hero({ data, isloading }) {
             />
           )
         })
-      }
+      )}
     </div>
   )
 }

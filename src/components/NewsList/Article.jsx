@@ -1,6 +1,14 @@
 import styles from './newsList.module.css'
 
-const Article = ({ title, url, description, source, author, urlToImage }) => {
+const Article = ({
+  title,
+  url,
+  description,
+  source,
+  author,
+  urlToImage,
+  loadingAsync = false,
+}) => {
   return (
     <article className={styles.article}>
       <div className={styles.article__description}>
@@ -19,7 +27,18 @@ const Article = ({ title, url, description, source, author, urlToImage }) => {
         target="_blank"
         rel="noreferrer"
       >
-        <img src={urlToImage} alt={title} loading="lazy" />
+        {loadingAsync ? (
+          <img
+            src={urlToImage}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            width="300px"
+            height="250px"
+          />
+        ) : (
+          <img src={urlToImage} alt={title} />
+        )}
       </a>
     </article>
   )

@@ -10,7 +10,6 @@
   position: fixed;
   right: 1rem;
   width: 3rem;
-  animation: 0.5s linear showWithOpacity;
 }
 
 .switch_button:hover {
@@ -71,13 +70,4 @@
 
 .inactive {
   opacity: 0.5;
-}
-
-@keyframes showWithOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

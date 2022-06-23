@@ -72,7 +72,11 @@ const Home = () => {
           <h3 className={styles.subTitle}>
             ⚽ {newsCategories.sports.categoria}
           </h3>
-          <NewsList data={sportsData} isloading={sportsLoading} />
+          <NewsList
+            data={sportsData}
+            isloading={sportsLoading}
+            loadingAsync={true}
+          />
           <Link
             to={`/noticias/${newsCategories.sports.category}`}
             className={styles.home__seemore}
@@ -84,7 +88,11 @@ const Home = () => {
           <h3 className={styles.subTitle}>
             🪙 {newsCategories.business.categoria}
           </h3>
-          <NewsList data={businessData} isloading={businessLoading} />
+          <NewsList
+            data={businessData}
+            isloading={businessLoading}
+            loadingAsync={true}
+          />
           <Link
             to={`/noticias/${newsCategories.business.category}`}
             className={styles.home__seemore}
