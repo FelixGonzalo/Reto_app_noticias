@@ -1,6 +1,5 @@
 .hero {
-  background-color: var(--background-color);
-  background-image: url('/public/assets/images/sinimagen.png');
+  background-color: var(--text-color);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

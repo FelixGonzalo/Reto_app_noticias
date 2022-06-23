@@ -4,7 +4,7 @@ import styles from './hero.module.css'
 const HeroCard = ({ urlToImage, url, title, description, author, source }) => {
   return (
     <div className={styles.hero__card}>
-      <img rel="preload" src={urlToImage} alt="hero" />
+      <img src={urlToImage} alt={title} />
       <div className={styles.hero__card__description}>
         <a href={url} target="_blank" rel="noreferrer">
           <h2>{title}</h2>
