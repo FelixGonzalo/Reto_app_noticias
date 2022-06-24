@@ -17,12 +17,13 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 4. Última búsqueda del usuario.
 5. Asistente de lectura.
 6. Modo oscuro inteligente.
-7. Registrar usuario.
-8. Iniciar sesión.
-9. Mostrar perfil de usuario.
-10. Verificar correo.
-11. Cambiar de contraseña.
-12. Editar perfil del usuario.
+7. Historial de noticias del usuario.
+8. Registrar usuario.
+9. Iniciar sesión.
+10. Mostrar perfil de usuario.
+11. Verificar correo.
+12. Cambiar de contraseña.
+13. Editar perfil del usuario.
 
 ## 📦 Estructura de carpetas
 
@@ -55,10 +56,12 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 - [React Hook Form](https://react-hook-form.com/)
 - React Hooks
 - React Context
+- [React Helmet Async](https://www.npmjs.com/package/react-helmet-async)
 - CSS module, Flexbox, CSS Grid
 - Mobile-first workflow
 - [News API](https://newsapi.org/)
 - ARC Identity API
+- [Cloud Firestore](https://firebase.google.com/docs/firestore)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Pure CSS Loaders](https://loading.io/css/)
 
