@@ -37,8 +37,6 @@ export function useNewsHistory() {
         author,
         urlToImage,
       })
-    } else {
-      console.log('hola mundo')
     }
   }
 
