@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import UpdatePassword from '../../components/auth/UpdatePassword'
 import UpdateUser from '../../components/auth/UpdateUser'
 import { VerifyEmail } from '../../components/auth/VerifyEmail'
@@ -52,11 +53,22 @@ function UserProfile() {
             </button>
           </div>
           <div className={styles.userProfile__options}>
+            <Link
+              className={`${styles.userProfile__btn} ${styles.userProfile__btn_logout}`}
+              to={'/noticias/historial'}
+            >
+              Historial de noticias
+            </Link>
+          </div>
+          <div className={styles.userProfile__options}>
+            <h2>Editar perfil</h2>
             <UpdateUser />
+          </div>
+          <div className={styles.userProfile__options}>
+            <h2>Cambiar contraseña</h2>
             <UpdatePassword />
           </div>
         </div>
-
         <div>
           <LastSearch />
         </div>

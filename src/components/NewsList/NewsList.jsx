@@ -10,6 +10,7 @@ const NewsList = ({
   isError,
   isPageSearch,
   loadingAsync = false,
+  saveToHistoryWhenClicked = false,
 }) => {
   const { saveLastArticles } = useLastSearch()
 
@@ -57,6 +58,7 @@ const NewsList = ({
                 source={item?.source?.name}
                 urlToImage={item.urlToImage}
                 loadingAsync={loadingAsync}
+                saveToHistoryWhenClicked={saveToHistoryWhenClicked}
               />
             </Suspense>
           )

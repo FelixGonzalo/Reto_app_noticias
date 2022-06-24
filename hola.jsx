@@ -6,6 +6,11 @@ import NewsList from '../../components/NewsList/NewsList'
 import { useNewsByCategory } from '../../hooks/useNewsByCategory'
 import { newsCategories } from '../../services/newsApi/getNewsCategories'
 import { ReadingAssistanceMenu } from '../../components/ReadingAssistanceMenu'
+
+//Agregando la importacion para los iconos
+import { IoGameController } from 'react-icons/io5'
+import { GiSoccerBall, GiMoneyStack } from 'react-icons/gi'
+
 import { Helmet } from 'react-helmet-async'
 import styles from './home.module.css'
 
@@ -65,15 +70,16 @@ const Home = () => {
         <Header />
         <Hero data={heroData} isloading={heroLoading} />
         <main className={`wrapper ${styles.home__main}`}>
-          <section className={styles.home__main_section}>
+          <section>
             <h3 className={styles.subTitle}>
-              🌎 {newsCategories.entertainment.categoria}
+              &nbsp;{' '}
+              <IoGameController style={{ color: 'red', fontSize: '26px' }} />{' '}
+              &nbsp;
+              {newsCategories.entertainment.categoria}
             </h3>
             <NewsList
               data={entertainmentData}
               isloading={entertainmentLoading}
-              loadingAsync={true}
-              saveToHistoryWhenClicked={true}
             />
             <Link
               to={`/noticias/${newsCategories.entertainment.category}`}
@@ -82,15 +88,16 @@ const Home = () => {
               Ver más
             </Link>
           </section>
-          <section className={styles.home__main_section}>
+          <section>
             <h3 className={styles.subTitle}>
-              ⚽ {newsCategories.sports.categoria}
+              &nbsp; <GiSoccerBall style={{ color: 'red', fontSize: '26px' }} />{' '}
+              &nbsp;
+              {newsCategories.sports.categoria}
             </h3>
             <NewsList
               data={sportsData}
               isloading={sportsLoading}
               loadingAsync={true}
-              saveToHistoryWhenClicked={true}
             />
             <Link
               to={`/noticias/${newsCategories.sports.category}`}
@@ -99,15 +106,16 @@ const Home = () => {
               Ver más
             </Link>
           </section>
-          <section className={styles.home__main_section}>
+          <section>
             <h3 className={styles.subTitle}>
-              🪙 {newsCategories.business.categoria}
+              &nbsp; <GiMoneyStack style={{ color: 'red', fontSize: '26px' }} />{' '}
+              &nbsp;
+              {newsCategories.business.categoria}
             </h3>
             <NewsList
               data={businessData}
               isloading={businessLoading}
               loadingAsync={true}
-              saveToHistoryWhenClicked={true}
             />
             <Link
               to={`/noticias/${newsCategories.business.category}`}
@@ -116,6 +124,25 @@ const Home = () => {
               Ver más
             </Link>
           </section>
+
+          <aside>
+            <div class="publicidad">
+              <div class="cuadro1">
+                <div class="subcuadro1">
+                  <marquee bgcolor="red" behavior="scroll" direction="left">
+                    me pruebas
+                  </marquee>
+                </div>
+              </div>
+
+              <div class="cuadro2">
+                <div class="subcuadro2"></div>
+              </div>
+              <div class="cuadro3">
+                <div class="subcuadro3"></div>
+              </div>
+            </div>
+          </aside>
         </main>
       </main>
     </>

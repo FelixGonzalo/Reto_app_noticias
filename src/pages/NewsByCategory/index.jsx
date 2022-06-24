@@ -42,7 +42,11 @@ function NewsByCategory() {
         <h1 style={{ marginLeft: '5px' }}>| Noticias sobre {categoryName}</h1>
         <br />
         <br />
-        <NewsList data={data} isloading={loading} />
+        <NewsList
+          data={data}
+          isloading={loading}
+          saveToHistoryWhenClicked={true}
+        />
         {loading && <Loader />}
         {isTheEnd && data.length > 0 && (
           <p className="message_default">
