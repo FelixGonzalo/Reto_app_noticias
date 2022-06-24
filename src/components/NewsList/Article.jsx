@@ -1,12 +1,13 @@
 import { useNewsHistory } from '../../hooks/useNewsHistory'
+import PropTypes from 'prop-types'
 import styles from './newsList.module.css'
 
 const Article = ({
   title,
   url,
   description,
-  source,
-  author,
+  source = '',
+  author = 'No definido',
   urlToImage,
   loadingAsync = false,
   saveToHistoryWhenClicked = false,
@@ -65,6 +66,17 @@ const Article = ({
       </a>
     </article>
   )
+}
+
+Article.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  source: PropTypes.string,
+  author: PropTypes.string,
+  urlToImage: PropTypes.string.isRequired,
+  loadingAsync: PropTypes.bool,
+  saveToHistoryWhenClicked: PropTypes.bool,
 }
 
 export default Article

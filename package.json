@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "9.8.4",
     "just-debounce-it": "3.0.1",
+    "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet-async": "1.3.0",

@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react'
 import { useLastSearch } from '../../hooks/utils/useLastSearch.js'
 import LoadingArticle from './LoadingArticle.jsx'
 import styles from './newsList.module.css'
+import PropTypes from 'prop-types'
 const Article = lazy(() => import('./Article.jsx'))
 
 const NewsList = ({
@@ -66,6 +67,15 @@ const NewsList = ({
       </div>
     </>
   )
+}
+
+NewsList.propTypes = {
+  data: PropTypes.array,
+  isLoading: PropTypes.bool,
+  isError: PropTypes.bool,
+  isPageSearch:  PropTypes.bool,
+  loadingAsync:  PropTypes.bool,
+  saveToHistoryWhenClicked: PropTypes.bool,
 }
 
 export default NewsList
