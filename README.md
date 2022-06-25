@@ -7,7 +7,7 @@ El proyecto es un [reto técnico](https://github.com/cocotopia/reto-app-noticias
 
 La Portada es una web de noticias recientes y en español. Todo el acontecer del mundo en un solo lugar.
 
-![Captura del proyecto La Portada](./portada.png)
+![Captura del proyecto La Portada](./portada3.webp)
 
 ### 📝 Requerimientos
 
@@ -72,7 +72,7 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 - Revisión y feedback de cada avance.
 - Repartir nuevas tareas en cada reunión.
 
-![Tablero Kanban del proyecto](./portada2.png)
+![Tablero Kanban del proyecto](./portada2.webp)
 
 ## Available Scripts
 

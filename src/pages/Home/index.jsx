@@ -8,18 +8,17 @@ import { newsCategories } from '../../services/newsApi/getNewsCategories'
 import { ReadingAssistanceMenu } from '../../components/ReadingAssistanceMenu'
 
 //Agregando la importacion para los iconos
-import {IoGameController} from 'react-icons/io5';
-import {GiSoccerBall, GiMoneyStack} from 'react-icons/gi';
+import { IoGameController } from 'react-icons/io5'
+import { GiSoccerBall, GiMoneyStack } from 'react-icons/gi'
 
 import { Helmet } from 'react-helmet-async'
 import styles from './home.module.css'
 import Aside from '../../components/Aside'
 import AsideSearch from '../../components/Aside/AsideSearch'
 
-
 const Home = () => {
   const { data: heroData, loading: heroLoading } = useNewsByCategory({
-    category: newsCategories.technology.category,
+    category: newsCategories.entertainment.category,
     pageSize: 1,
   })
   const { data: businessData, loading: businessLoading } = useNewsByCategory({
@@ -74,10 +73,10 @@ const Home = () => {
       <Header />
       <main className={styles.home}>
         <Hero data={heroData} isloading={heroLoading} />
-        
+
         <div className={styles.home__main}>
           <div className={styles.home__main_search}>
-            <AsideSearch/>
+            <AsideSearch />
           </div>
           <div className={styles.home__main_sections}>
             <section>
@@ -100,7 +99,8 @@ const Home = () => {
             </section>
             <section>
               <h3 className={styles.subTitle}>
-                &nbsp; <GiSoccerBall style={{ color: 'red', fontSize: '26px' }} />{' '}
+                &nbsp;{' '}
+                <GiSoccerBall style={{ color: 'red', fontSize: '26px' }} />{' '}
                 &nbsp;
                 {newsCategories.sports.categoria}
               </h3>
@@ -119,7 +119,8 @@ const Home = () => {
             </section>
             <section>
               <h3 className={styles.subTitle}>
-                &nbsp; <GiMoneyStack style={{ color: 'red', fontSize: '26px' }} />{' '}
+                &nbsp;{' '}
+                <GiMoneyStack style={{ color: 'red', fontSize: '26px' }} />{' '}
                 &nbsp;
                 {newsCategories.business.categoria}
               </h3>
@@ -137,14 +138,13 @@ const Home = () => {
               </Link>
             </section>
           </div>
-          
+
           <div className={styles.home__main_aside}>
-            <Aside/>
+            <Aside />
           </div>
         </div>
       </main>
     </>
-    
   )
-  }
+}
 export default Home
