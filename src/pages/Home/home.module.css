@@ -10,6 +10,16 @@
   background: linear-gradient(180deg, rgb(226, 58, 58) 75%, rgb(171, 53, 53));
 }
 
+.home__main {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.home__main_sections {
+  display: block;
+}
+
 .subTitle {
   margin: 2rem 1rem;
   text-transform: uppercase;
@@ -23,17 +33,24 @@
   margin-top: -15px;
 }
 
-.home__main_section {
-  min-height: 500px;
-}
+
 
 @media screen and (min-width: 768px) {
+  .home__main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: .5rem;
+  }
   .subTitle {
     margin: 2rem 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .home__main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
   .subTitle {
     margin: 2rem 0;
   }
@@ -41,161 +58,4 @@
     text-align: right;
     margin-top: 10px;
   }
-}
-
-/*ESTILOS PARA EL ASIDE*/
-
-/*categoria de noticias*/
-.aside{
-  width: 280px;
-  height: 1800px;
-  background: #4B4B4B;
-  margin-top: 200px;
-  float: right;
-  position: absolute;
-}
-
-.aside h1{
-  height: 300px;
-  font-size: 25px;
-  text-align: left;
-  margin-left: 23px;
-  line-height: 50px;
-  font-family: var(--font-logo);
-}
- .aside p{
-  position: relative;
-  margin-top: -140px;
-  font-size: 25px;
-  text-align: left;
-  margin-left: 23px;
-  line-height: 50px;
-  font-family: var(--font-logo);
- }
-
-.aside img{
-  margin-top: -270px;
-  width: 240px;
-  margin-right: 23px;
-  margin-left: 23px;
-}
-
-j{
-  color: white;
-  text-decoration: underline;
-  font-weight: bold;
-  margin-left: 19px;
-  margin-right: 13px;
-  font-size: 14px;
-}
-button{
-  position: absolute;
-  padding: 10px 15px;
-  border-radius: 3px;
-  outline: none;
-  background:rgb(11, 10, 10);
-  color:white;
-  cursor: pointer;
-  transition: .5s;
-  overflow: hidden;
-  margin-top: -220px;
-  margin-left: 23px;
-}
-
-button:hover{
-  background:rgb(74, 8, 8);
-  color: rgb(255, 255, 255);
-}
-
-button span{
-  position: absolute;
-  background: red;
-  transition: .5s;
-}
-
-button span:nth-child(1){
-  width: 100%;
-  height: 1px;
-  top:0;
-  left: -100%;
-}
-
-button span:nth-child(2){
-  width: 100%;
-  height: 1px;
-  bottom:0;
-  right: -100%;
-}
-
-button span:nth-child(3){
-  width: 1px;
-  height: 100%;
-  bottom:0;
-  left: 0;
-}
-
-button span:nth-child(4){
-  width: 1px;
-  height: 100%;
-  top: -100%;
-  right: 0;
-}
-
-button:hover span:nth-child(1){
-  left: 0;
-}
-
-button:hover span:nth-child(2){
-  right: 0;
-}
-
-button:hover span:nth-child(3){
-  bottom: 0;
-}
-
-button:hover span:nth-child(4){
-  top: 0;
-}
-
-/*Buscador*/
-.box{
-  margin-top: 260px;
-  
-}
-
-input{
- 
-  position: relative;
-  font-size: 13px;
-  box-sizing: border-box;
-  transition: .5s;
-}
-
-input[type="text"]{
-  margin-left: 20px;
-  background: #fff;
-  width: 170px;
-  height: 35px;
-  border: none;
-  color: black;
-  outline: none;
-  padding: 0 25px;
-  border-radius: 25px 0 0 25px;
-}
-
-input[type="submit"]{
-  position: relative;
-  left: -5px;
-  border-radius: 0 25px 25px 0;
-  width: 70px;
-  height: 35px;
-  border: none;
-  outline: none;
-  cursor:pointer;
-  background: #af1e0b;
-  color: #fff;
-}
-
-input[type="submit"]:hover{
-  background: #ff5722;
 }
