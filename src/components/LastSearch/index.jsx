@@ -5,7 +5,7 @@ import styles from './lastsearch.module.css'
 const LastSearch = () => {
   const { lastSearch, lastArticles } = useLastSearch()
 
-  if (lastSearch?.length === 0 || !lastArticles) {
+  if (!lastSearch || lastSearch?.length === 0 || !lastArticles || lastArticles?.length === 0) {
     return <p>No se encontraron resultados de la última búsqueda</p>
   }
 

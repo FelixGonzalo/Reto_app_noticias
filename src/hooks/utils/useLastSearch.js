@@ -9,13 +9,14 @@ export function useLastSearch() {
 	const saveLastSearch = (search) => {
 		localStorage.setItem('lastSearch',search);
 	}
-
+	
 	const saveLastArticles = (data) => {
 		localStorage.setItem('lastArticles',JSON.stringify(data));
 	}
-
+	
 	useEffect(() => {
 		setLastSearch(localStorage.getItem('lastSearch'));
+		console.log(lastSearch)
 		setLastArticles(JSON.parse(localStorage.getItem('lastArticles')));
 	}, [lastSearch])
 
