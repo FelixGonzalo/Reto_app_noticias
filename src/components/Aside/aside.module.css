@@ -47,8 +47,8 @@
   padding: 10px 15px;
   border-radius: 3px;
   outline: none;
-  background:rgb(11, 10, 10);
-  color:white;
+  background: var(--background-color-2);
+  color:var(--text-color);
   cursor: pointer;
   transition: .5s;
   overflow: hidden;
@@ -58,7 +58,7 @@
   padding-bottom: .5rem;
 }
 .aside__search_popular > div > a:hover {
-	background:rgb(74, 8, 8);
+	background: var(--primary-color);
   color: rgb(255, 255, 255);
 }
 
