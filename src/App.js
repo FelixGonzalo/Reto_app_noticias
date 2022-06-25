@@ -1,6 +1,7 @@
 import { HelmetProvider } from 'react-helmet-async'
 import AppRoutes from './routes/AppRoutes'
 import CurrentUserProvider from './state/context/currentUserProvider'
+import NewsHistoryProvider from './state/context/newsHistoryProvider'
 import { ThemeProvider } from './state/context/themeProvider'
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
     <ThemeProvider>
       <CurrentUserProvider>
         <HelmetProvider>
-          <AppRoutes />
+          <NewsHistoryProvider>
+            <AppRoutes />
+          </NewsHistoryProvider>
         </HelmetProvider>
       </CurrentUserProvider>
     </ThemeProvider>

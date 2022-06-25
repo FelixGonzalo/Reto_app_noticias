@@ -50,6 +50,7 @@ const NewsBySearch = () => {
           isloading={isloading}
           isError={isError}
           isPageSearch={isPageSearch}
+          saveToHistoryWhenClicked={true}
         />
       </main>
     </>

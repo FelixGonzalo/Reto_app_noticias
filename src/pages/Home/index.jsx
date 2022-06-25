@@ -6,6 +6,7 @@ import NewsList from '../../components/NewsList/NewsList'
 import { useNewsByCategory } from '../../hooks/useNewsByCategory'
 import { newsCategories } from '../../services/newsApi/getNewsCategories'
 import { ReadingAssistanceMenu } from '../../components/ReadingAssistanceMenu'
+<<<<<<< HEAD
 
 //Agregando la importacion para los iconos
 import {IoGameController} from 'react-icons/io5';
@@ -14,6 +15,13 @@ import {GiSoccerBall, GiMoneyStack} from 'react-icons/gi';
 import { Helmet } from 'react-helmet-async'
 import styles from './home.module.css'
 
+=======
+import { Helmet } from 'react-helmet-async'
+import styles from './home.module.css'
+//icons
+import { IoGameController } from 'react-icons/io5'
+import { GiSoccerBall, GiMoneyStack } from 'react-icons/gi'
+>>>>>>> ccfc73994de3a1f541b69312205b8405e2e45148
 
 const Home = () => {
   const { data: heroData, loading: heroLoading } = useNewsByCategory({
@@ -83,6 +91,10 @@ const Home = () => {
             <NewsList
               data={entertainmentData}
               isloading={entertainmentLoading}
+<<<<<<< HEAD
+=======
+              saveToHistoryWhenClicked={true}
+>>>>>>> ccfc73994de3a1f541b69312205b8405e2e45148
             />
             <Link
               to={`/noticias/${newsCategories.entertainment.category}`}
@@ -101,6 +113,7 @@ const Home = () => {
               data={sportsData}
               isloading={sportsLoading}
               loadingAsync={true}
+              saveToHistoryWhenClicked={true}
             />
             <Link
               to={`/noticias/${newsCategories.sports.category}`}
@@ -119,6 +132,7 @@ const Home = () => {
               data={businessData}
               isloading={businessLoading}
               loadingAsync={true}
+              saveToHistoryWhenClicked={true}
             />
             <Link
               to={`/noticias/${newsCategories.business.category}`}
@@ -127,8 +141,29 @@ const Home = () => {
               Ver más
             </Link>
           </section>
+<<<<<<< HEAD
 
           
+=======
+          <aside>
+            <div className="publicidad">
+              <div className="cuadro1">
+                <div className="subcuadro1">
+                  <marquee bgcolor="red" behavior="scroll" direction="left">
+                    me pruebas
+                  </marquee>
+                </div>
+              </div>
+
+              <div className="cuadro2">
+                <div className="subcuadro2"></div>
+              </div>
+              <div className="cuadro3">
+                <div className="subcuadro3"></div>
+              </div>
+            </div>
+          </aside>
+>>>>>>> ccfc73994de3a1f541b69312205b8405e2e45148
         </main>
       </main>
       </td>
@@ -239,4 +274,3 @@ const Home = () => {
   )
   }
 export default Home
-

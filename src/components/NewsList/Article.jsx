@@ -1,18 +1,41 @@
+import { useNewsHistory } from '../../hooks/useNewsHistory'
+import PropTypes from 'prop-types'
 import styles from './newsList.module.css'
 
 const Article = ({
   title,
   url,
   description,
-  source,
-  author,
+  source = '',
+  author = 'No definido',
   urlToImage,
   loadingAsync = false,
+  saveToHistoryWhenClicked = false,
 }) => {
+  const { addNoticiaToUserHistory } = useNewsHistory()
+
+  const handle_addNoticiaToUserHistory = () => {
+    if (saveToHistoryWhenClicked) {
+      addNoticiaToUserHistory({
+        title,
+        url,
+        description,
+        source,
+        author,
+        urlToImage,
+      })
+    }
+  }
+
   return (
     <article className={styles.article}>
       <div className={styles.article__description}>
-        <a href={url} target="_blank" rel="noreferrer">
+        <a
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          onClick={handle_addNoticiaToUserHistory}
+        >
           <h3 className={styles.title}>{title}</h3>
         </a>
         <p>{description}</p>
@@ -26,6 +49,7 @@ const Article = ({
         href={url}
         target="_blank"
         rel="noreferrer"
+        onClick={handle_addNoticiaToUserHistory}
       >
         {loadingAsync ? (
           <img
@@ -42,6 +66,17 @@ const Article = ({
       </a>
     </article>
   )
+}
+
+Article.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  source: PropTypes.string,
+  author: PropTypes.string,
+  urlToImage: PropTypes.string.isRequired,
+  loadingAsync: PropTypes.bool,
+  saveToHistoryWhenClicked: PropTypes.bool,
 }
 
 export default Article
