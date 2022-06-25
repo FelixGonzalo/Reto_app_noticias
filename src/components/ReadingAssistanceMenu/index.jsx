@@ -3,6 +3,10 @@ import { createPortal } from 'react-dom'
 import { useShow } from '../../hooks/utils/useShow'
 import { readingAssistant } from '../../services/readingAssistant'
 import styles from './readingAssistanceMenu.module.css'
+
+import {ImHeadphones, ImVolumeHigh} from 'react-icons/im';
+
+
 export function ReadingAssistanceMenu({ getTextArray }) {
   const { show, switch_off, switch_on } = useShow()
   const {
@@ -64,7 +68,7 @@ export function ReadingAssistanceMenu({ getTextArray }) {
                 onClick={startReading}
                 className={!pauseActive ? styles.active : styles.inactive}
               >
-                🔊
+                <ImVolumeHigh style={{ color: 'red', fontSize: '20px' }} />
               </button>
               <button
                 onClick={stopReading}
@@ -83,7 +87,7 @@ export function ReadingAssistanceMenu({ getTextArray }) {
           document.getElementById('root_modal')
         )}
       <button className={styles.switch_button} onClick={switch_on}>
-        🎧
+        <ImHeadphones style={{ color: 'red', fontSize: '20px' }} />
       </button>
     </div>
   )
