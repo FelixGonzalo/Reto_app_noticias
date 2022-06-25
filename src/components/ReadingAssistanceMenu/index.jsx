@@ -68,7 +68,7 @@ export function ReadingAssistanceMenu({ getTextArray }) {
                 onClick={startReading}
                 className={!pauseActive ? styles.active : styles.inactive}
               >
-                <HiSpeakerphone />
+                <HiVolumeUp />
               </button>
               <button
                 onClick={stopReading}
@@ -80,7 +80,7 @@ export function ReadingAssistanceMenu({ getTextArray }) {
                 onClick={resumeReading}
                 className={pauseActive ? styles.active : styles.inactive}
               >
-                <HiVolumeUp />
+                <HiSpeakerphone />
               </button>
             </div>
           </div>,
