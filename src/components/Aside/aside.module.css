@@ -12,7 +12,7 @@
 .aside__search {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
   padding: 1rem;
   padding-bottom: 0;
   width: 100%;
@@ -36,7 +36,7 @@
 
 .aside__search_popular > div {
 	display: flex;
-	gap: .2rem;
+	gap: .3rem .5rem;
 	flex-wrap: wrap;
 }
 
@@ -52,6 +52,10 @@
   cursor: pointer;
   transition: .5s;
   overflow: hidden;
+}
+
+.aside__search_popular h2{
+  padding-bottom: .5rem;
 }
 .aside__search_popular > div > a:hover {
 	background:rgb(74, 8, 8);
