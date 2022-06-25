@@ -81,9 +81,8 @@ const UpdateUser = () => {
       <button type="submit" className={styles.btn}>
         Actualizar Datos
       </button>
-
       {success && <p>Datos actualizados correctamente</p>}
-      {error && <p>{error}</p>}
+      {error && <p> Error al editar perfil</p>}
       {loading && <p>Cargando...</p>}
     </form>
   )

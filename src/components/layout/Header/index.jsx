@@ -22,6 +22,10 @@ export function Header() {
           <Link to={'/usuario/perfil'} className={styles.header__btn}>
             {currentUser?.userProfile?.firstName}{' '}
             {currentUser?.userProfile?.lastName}
+            {!currentUser?.userProfile?.firstName &&
+            !currentUser?.userProfile?.lastName
+              ? 'Perfil'
+              : null}
           </Link>
           <span className={styles.header__top__line}>|</span>
           <button className={styles.header__btn} onClick={handleLogout}>
@@ -61,6 +65,10 @@ export function SimpleHeader() {
           <Link to={'/usuario/perfil'} className={styles.header__btn}>
             {currentUser?.userProfile?.firstName}{' '}
             {currentUser?.userProfile?.lastName}
+            {!currentUser?.userProfile?.firstName &&
+            !currentUser?.userProfile?.lastName
+              ? 'Perfil'
+              : null}
           </Link>
           <span className={styles.header__top__line}>|</span>
           <button className={styles.header__btn} onClick={handleLogout}>

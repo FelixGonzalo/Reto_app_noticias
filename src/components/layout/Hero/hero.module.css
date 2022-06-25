@@ -4,14 +4,14 @@
   background-position: center;
   background-size: cover;
   height: 60vh;
-  max-height: 500px;
+  max-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   position: relative;
   width: 100%;
-  max-width: 75rem;
+  max-width: 89rem;
   margin: 0 auto;
 }
 

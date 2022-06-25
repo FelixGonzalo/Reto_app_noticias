@@ -29,9 +29,13 @@ export function useUpdateUser() {
         phone,
       })
       setLoading(false)
+      if (!res.hasOwnProperty('email')) {
+        setError(true)
+        setSuccess(false)
+        return
+      }
       setSuccess(true)
       localStorage.setItem('userProfile', JSON.stringify(res))
-      return res
     } catch (error) {
       setLoading(false)
       setError(true)

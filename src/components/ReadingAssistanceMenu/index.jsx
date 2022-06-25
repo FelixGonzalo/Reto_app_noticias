@@ -4,8 +4,8 @@ import { useShow } from '../../hooks/utils/useShow'
 import { readingAssistant } from '../../services/readingAssistant'
 import styles from './readingAssistanceMenu.module.css'
 
-import {ImHeadphones, ImVolumeHigh} from 'react-icons/im';
-
+import { ImHeadphones } from 'react-icons/im'
+import { HiSpeakerphone, HiStop, HiVolumeUp } from 'react-icons/hi'
 
 export function ReadingAssistanceMenu({ getTextArray }) {
   const { show, switch_off, switch_on } = useShow()
@@ -68,26 +68,26 @@ export function ReadingAssistanceMenu({ getTextArray }) {
                 onClick={startReading}
                 className={!pauseActive ? styles.active : styles.inactive}
               >
-                <ImVolumeHigh style={{ color: 'red', fontSize: '20px' }} />
+                <HiSpeakerphone />
               </button>
               <button
                 onClick={stopReading}
                 className={pauseActive ? styles.active : styles.inactive}
               >
-                🛑
+                <HiStop />
               </button>
               <button
                 onClick={resumeReading}
                 className={pauseActive ? styles.active : styles.inactive}
               >
-                🔉
+                <HiVolumeUp />
               </button>
             </div>
           </div>,
           document.getElementById('root_modal')
         )}
       <button className={styles.switch_button} onClick={switch_on}>
-        <ImHeadphones style={{ color: 'red', fontSize: '20px' }} />
+        <ImHeadphones style={{ fontSize: '20px' }} />
       </button>
     </div>
   )
