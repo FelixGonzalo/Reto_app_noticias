@@ -10,6 +10,9 @@
   position: fixed;
   right: 1rem;
   width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .themeButton:hover {

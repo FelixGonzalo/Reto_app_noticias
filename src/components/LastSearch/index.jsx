@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom'
 import { useLastSearch } from '../../hooks/utils/useLastSearch'
-import Article from '../NewsList/Article'
 import styles from './lastsearch.module.css'
 
 const LastSearch = () => {
@@ -10,24 +10,29 @@ const LastSearch = () => {
   }
 
   return (
-    <>
-      <br /> <br />
+    <div className={styles.lastSearch}>
       <h2>Última Búsqueda</h2>
-      <h2>| {lastSearch}</h2>
+      <Link to={`/noticias/search/${lastSearch}`}>
+        <h2>| {lastSearch}</h2>
+      </Link>
       <div className={styles.lastArticles}>
-        {lastArticles?.map((item) => (
-          <Article
-            key={item.title}
-            title={item.title}
-            url={item.url}
-            description={item.description}
-            author={item.author}
-            source={item.source}
-            urlToImage={item.urlToImage}
-          />
+        {lastArticles?.map((item,index) => (
+          <article key={item.title + index}>
+            <a href={item.url} target='_blank' rel='noreferrer'>
+              <img src={item.urlToImage} alt={item.title} />
+            </a>
+            <a href={item.url} target='_blank' rel='noreferrer'>
+              <h2>{item.title}</h2>
+            </a>
+            <small>
+              <span>Author: {item.author}</span>
+              <span>Fuente: {item.source}</span>
+            </small>
+          </article>
+          
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

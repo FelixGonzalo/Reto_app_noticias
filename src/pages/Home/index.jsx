@@ -14,6 +14,7 @@ import {GiSoccerBall, GiMoneyStack} from 'react-icons/gi';
 import { Helmet } from 'react-helmet-async'
 import styles from './home.module.css'
 import Aside from '../../components/Aside'
+import AsideSearch from '../../components/Aside/AsideSearch'
 
 
 const Home = () => {
@@ -75,6 +76,9 @@ const Home = () => {
         <Hero data={heroData} isloading={heroLoading} />
         
         <div className={styles.home__main}>
+          <div className={styles.home__main_search}>
+            <AsideSearch/>
+          </div>
           <div className={styles.home__main_sections}>
             <section>
               <h3 className={styles.subTitle}>
@@ -133,7 +137,10 @@ const Home = () => {
               </Link>
             </section>
           </div>
-          <Aside/>
+          
+          <div className={styles.home__main_aside}>
+            <Aside/>
+          </div>
         </div>
       </main>
     </>

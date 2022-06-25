@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import UpdatePassword from '../../components/auth/UpdatePassword'
 import UpdateUser from '../../components/auth/UpdateUser'
 import { VerifyEmail } from '../../components/auth/VerifyEmail'
-import LastSearch from '../../components/LastSearch'
 import { SimpleHeader } from '../../components/layout/Header'
 import { useCurrentUser } from '../../hooks/auth/useCurrentUser'
 import styles from './userProfile.module.css'
@@ -69,9 +68,7 @@ function UserProfile() {
             <UpdatePassword />
           </div>
         </div>
-        <div>
-          <LastSearch />
-        </div>
+        
       </main>
     </>
   )
