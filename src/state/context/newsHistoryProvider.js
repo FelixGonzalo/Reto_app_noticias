@@ -31,7 +31,7 @@ const NewsHistoryProvider = (props) => {
     urlToImage,
   }) => {
     try {
-      const newsItem = await handleAddNoticiaToUserHistory({
+      await handleAddNoticiaToUserHistory({
         db,
         userEmail,
         title,

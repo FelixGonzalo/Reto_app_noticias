@@ -16,6 +16,7 @@
   font-display: swap;
 }
 :root {
+  --primary-color: #e23a3a;
   --font-logo: 'DM Serif Display', serif;
   --font-article: 'Newsreader', serif;
   --font-r: 400;
@@ -23,7 +24,6 @@
 }
 
 :root.light {
-  --primary-color: #e23a3a;
   --text-color: #242424;
   --text-color-gray: #828282;
   --background-color: #f1f1f1;
@@ -33,7 +33,6 @@
   --input-color: #f5f5f5;
 }
 :root.dark {
-  --primary-color: #f33e3e;
   --text-color: #f1f1f1;
   --text-color-gray: #c2c2c2;
   --background-color: #242424;

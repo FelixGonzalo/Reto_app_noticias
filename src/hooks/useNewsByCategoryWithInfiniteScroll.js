@@ -22,6 +22,7 @@ export function useNewsByCategoryWithInfiniteScroll({ category, pageSize }) {
     getNews()
     window.addEventListener('scroll', handleOnScroll)
     return () => window.removeEventListener('scroll', handleOnScroll)
+    //eslint-disable-next-line
   }, [page])
 
   const getNews = () => {
