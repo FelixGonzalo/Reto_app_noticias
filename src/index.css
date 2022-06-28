@@ -24,7 +24,7 @@
 }
 
 :root.light {
-  --text-color: #242424;
+  --text-color: #313131;
   --text-color-gray: #828282;
   --background-color: #f1f1f1;
   --background-color-2: #ffffff;
@@ -36,7 +36,7 @@
   --text-color: #f1f1f1;
   --text-color-gray: #c2c2c2;
   --background-color: #242424;
-  --background-color-2: #121212;
+  --background-color-2: #1b1b1b;
   --gray-color: #3d3d3d;
   --gray-color-2: #595959;
   --input-color: #282828;
