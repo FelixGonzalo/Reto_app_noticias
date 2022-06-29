@@ -24,6 +24,8 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 11. Verificar correo.
 12. Cambiar de contraseña.
 13. Editar perfil del usuario.
+14. Demo de suscripción a planes
+15. PWA
 
 ## 📦 Estructura de carpetas
 
