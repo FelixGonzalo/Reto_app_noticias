@@ -1,31 +1,37 @@
+import { GoCheck } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 import styles from './card.module.css'
 
-const Card = () => {
+const Card = ({price= 0, description = 'description', details = ['details']}) => {
+
 	return (
 		<div className={styles.card}>
 
 			<div className={styles.card__header}>
 				<h2>
 					<span>S/</span>
-					<span>59</span>
-						<span>/AL MES</span>
+					<span>{price}</span>
+					<span>/AL MES</span>
 				</h2>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque aliquam veniam.</p>
+				<p>{description}</p>
 			</div>
 			
 			<div className={styles.card__body}>
-				<p>✔ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-
-				<p>✔ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-
-				<p className={styles.text_disabled}>✔ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
-
-				<p className={styles.text_disabled}>✔ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+				{
+					details?.map((item,index) => (
+						<li key={index + 'card'}>
+							<span>
+								<GoCheck />
+							</span>
+							<p>{item}</p>
+						</li>
+					))
+				}
 			</div>
 
-			<button className={styles.card__footer}>
+			<Link to={'/usuario/suscripcion/data'} className={styles.card__footer}>
 					<span>Suscribirme</span>
-			</button>
+			</Link>
 
 		</div>
 	)

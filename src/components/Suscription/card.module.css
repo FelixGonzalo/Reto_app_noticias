@@ -3,6 +3,7 @@
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	margin: 0 auto;
 	max-width: 22rem;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -47,9 +48,18 @@
 	justify-content: space-between;
 	padding: 1.5rem;
 }
+.card__body > li {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	list-style: none;
+}
 
 
 .card__footer {
+	text-decoration: none;
+	display: block;
+	text-align: center;
 	background-color: var(--text-color);
 	color: var(--background-color);
 	font-size: 1rem;

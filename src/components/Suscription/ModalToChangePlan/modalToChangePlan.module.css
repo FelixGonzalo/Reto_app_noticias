@@ -40,13 +40,14 @@
 }
 
 .modalToChangePlan_footer {
-  background: #fff;
+  background-color: var(--background-color-2);
   padding: 20px;
   text-align: center;
 }
 
 .modalToChangePlan_footer button {
   background: none;
+  color: var(--text-color);
   border: none;
   outline: none;
   text-decoration: underline;

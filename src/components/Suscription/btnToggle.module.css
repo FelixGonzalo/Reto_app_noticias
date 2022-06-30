@@ -49,3 +49,7 @@
 	right: 0;
 	transition: .3s ease all;
 }
+
+.text_disabled {
+	color: var(--gray-color-2);
+}

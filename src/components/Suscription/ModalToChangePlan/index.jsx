@@ -3,10 +3,11 @@ import { GoCheck } from 'react-icons/go'
 import { useShow } from '../../../hooks/utils/useShow'
 export function ModalToChangePlan({
   name = 'Plan',
-  price = 's/00 al mes',
+  price = 0,
   description = 'description',
   details = ['details'],
   otherPlanName = 'other plan',
+  handleChangePlan
 }) {
   const { show, switch_show } = useShow()
 
@@ -14,10 +15,10 @@ export function ModalToChangePlan({
     <div className={styles.modalToChangePlan}>
       <header className={styles.modalToChangePlan_header} onClick={switch_show}>
         <span className={styles.modalToChangePlan_title}>{name}</span>
-        <span>{price}</span>
+        <span>S/ {price} al mes</span>
       </header>
       {show && (
-        <main className={styles.modalToChangePlan_body}>
+        <main className={styles.modalToChangePlan_body} onClick={switch_show}>
           {description}
           <ul>
             {details?.map((item, index) => (
@@ -32,7 +33,7 @@ export function ModalToChangePlan({
         </main>
       )}
       <footer className={styles.modalToChangePlan_footer}>
-        <button>Cambiar a {otherPlanName}</button>
+        <button onClick={handleChangePlan}>Cambiar a {otherPlanName}</button>
       </footer>
     </div>
   )

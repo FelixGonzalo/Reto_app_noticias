@@ -1,23 +1,15 @@
-import { useState } from "react"
 import styles from "./btnToggle.module.css"
 
-const BtnToggle = () => {
-
-	const [isPremium, setIsPremium] = useState(false);
-
-	const handleClick = () => {
-		setIsPremium(!isPremium);
-	}
-
+const BtnToggle = ({changePlan, suscription}) => {
 
 	return (
 		<div className={styles.btn}>
-		<p>Plan Estándar</p>
-		<button className={`${styles.btn_toggle} ${isPremium && styles.isPremium}`} onClick={handleClick}>
+		<p className={suscription?.name === 'Plan Premium' ? styles.text_disabled : ''}>Plan Estándar</p>
+		<button className={`${styles.btn_toggle} ${suscription?.name === 'Plan Premium' && styles.isPremium}`} onClick={changePlan}>
 				<span></span>
 				<span></span>
 		</button>
-		<p>Plan Premium</p>
+		<p className={suscription?.name === 'Plan Premium' ? '': styles.text_disabled}>Plan Premium</p>
 	</div>
 	)
 }

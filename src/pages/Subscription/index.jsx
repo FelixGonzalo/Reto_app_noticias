@@ -1,11 +1,15 @@
+import { useContext } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { SimpleHeader } from '../../components/layout/Header'
 import BtnToggle from '../../components/Suscription/BtnToggle'
 import Card from '../../components/Suscription/Card'
-import { ModalToChangePlan } from '../../components/Suscription/ModalToChangePlan'
+import { SuscriptionContext } from '../../state/context/suscriptionProvider'
 import styles from './suscription.module.css'
 
-const Suscription = () => {
+const Subscription = () => {
+
+  const { suscription, changePlan } = useContext(SuscriptionContext);
+
   return (
     <>
       <Helmet>
@@ -17,18 +21,19 @@ const Suscription = () => {
       </Helmet>
       <SimpleHeader />
       <main className={`wrapper ${styles.contentCard}`}>
-        <BtnToggle />
-        <Card />
-        <ModalToChangePlan
-          name="Plan Estándar"
-          price="s/29 al mes"
-          description="una descripción"
-          details={['detalle 1', 'detalle 2']}
-          otherPlanName="Plan Premiun"
+        <BtnToggle
+          changePlan={changePlan}
+          suscription={suscription} 
+        />
+        <Card
+          name={suscription?.name}
+          price={suscription?.price}
+          description={suscription?.description}
+          details={suscription?.details}
         />
       </main>
     </>
   )
 }
 
-export default Suscription
+export default Subscription
