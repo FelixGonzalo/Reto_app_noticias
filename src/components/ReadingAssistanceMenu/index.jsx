@@ -46,6 +46,7 @@ export function ReadingAssistanceMenu({ getTextArray }) {
     return () => {
       closeReadingAssistance()
     }
+    //eslint-disable-next-line
   }, [])
 
   return (

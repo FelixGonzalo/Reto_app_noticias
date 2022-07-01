@@ -65,6 +65,7 @@
   align-items: center;
   border: none;
   background: var(--background-color);
+  color: var(--text-color);
   border-radius: 100%;
   cursor: pointer;
   text-shadow: 0 0 10px rgba(97, 97, 97, 0.47);

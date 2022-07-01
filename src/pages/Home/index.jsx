@@ -61,7 +61,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Noticias destacadas | La Portad</title>
+        <title>Noticias destacadas | La Portada</title>
         <meta
           name="description"
           content="La Portada es una web de noticias recientes y en español. Todo el acontecer del mundo en un solo lugar."

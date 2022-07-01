@@ -15,6 +15,10 @@
   margin: 0 auto;
 }
 
+.hero > p {
+  color: var(--background-color);
+}
+
 .hero__card {
   display: block;
   width: 100%;

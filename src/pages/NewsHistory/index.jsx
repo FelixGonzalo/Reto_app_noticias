@@ -8,6 +8,7 @@ export function NewsHistory() {
 
   useEffect(() => {
     getNewsHistory()
+    //eslint-disable-next-line
   }, [])
 
   return (

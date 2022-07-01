@@ -16,7 +16,6 @@ export function useLastSearch() {
 	
 	useEffect(() => {
 		setLastSearch(localStorage.getItem('lastSearch'));
-		console.log(lastSearch)
 		setLastArticles(JSON.parse(localStorage.getItem('lastArticles')));
 	}, [lastSearch])
 
