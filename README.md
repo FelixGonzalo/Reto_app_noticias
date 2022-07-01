@@ -26,6 +26,7 @@ La Portada es una web de noticias recientes y en español. Todo el acontecer del
 13. Editar perfil del usuario.
 14. Demo de suscripción a planes
 15. PWA
+16. Suscripción a plan Premiun o Estándar
 
 ## 📦 Estructura de carpetas
 
