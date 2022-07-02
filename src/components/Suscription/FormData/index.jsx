@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useCurrentUser } from '../../../hooks/auth/useCurrentUser'
 import { SuscriptionContext } from '../../../state/context/suscriptionProvider'
 import styles from './formData.module.css'
+import { Link } from 'react-router-dom';
 
 const FormData = () => {
 	const { currentUser } = useCurrentUser();
@@ -24,7 +25,8 @@ const FormData = () => {
 		event.preventDefault()
 		console.log(data);
 	}
-
+	
+  
 	return (
 		<form className={styles.form} onSubmit={handleSubmit}>
 			<div>
@@ -45,7 +47,12 @@ const FormData = () => {
 					<input type="text" id="cvv" name='CVV' required value={data.CVV} onChange={handleChange} />
 				</div>
 			</div>
-			<button className={styles.form__btn}>Pagar S/ {suscription?.price}.00</button>
+			<Link to={'/usuario/suscripcion/data/exito'}>
+					<button className={styles.form__btn}>Pagar S/ {suscription?.price}.00</button>
+			</Link>
+					
+			
+			
 		</form>
 	)
 }

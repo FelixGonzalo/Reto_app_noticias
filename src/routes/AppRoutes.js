@@ -20,6 +20,8 @@ const NotFound = lazy(() => import('../pages/NotFound'))
 const NotAuthorized = lazy(() => import('../pages/NotAuthorized'))
 const Subscription = lazy(() => import('../pages/Subscription'))
 const Data = lazy(() => import('../pages/Subscription/Data'))
+const Exito = lazy(() => import('../pages/Subscription/Exito'))
+const ExitoPremium = lazy(() => import('../pages/Subscription/ExitoPremium'))
 
 const ThemeButton = lazy(() => import('../components/ThemeButton'))
 const Footer = lazy(() => import('../components/layout/Footer'))
@@ -82,6 +84,14 @@ export default function AppRoutes() {
            <Route
             path="/usuario/suscripcion/data"
             element={isUserLoggedIn ? <Data /> : <NotAuthorized />}
+          />
+          <Route
+            path="/usuario/suscripcion/data/exito"
+            element={isUserLoggedIn ? <Exito /> : <NotAuthorized />}
+          />
+          <Route
+            path="/usuario/suscripcion/data/exitoPremium"
+            element={isUserLoggedIn ? <ExitoPremium /> : <NotAuthorized />}
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
