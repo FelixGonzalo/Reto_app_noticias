@@ -54,6 +54,13 @@
   list-style: none;
 }
 
+.card__body_link {
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 .card__footer {
   text-decoration: none;
   display: block;
